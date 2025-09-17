@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evaspaces</title> 
+
+    <!-- Use compiled Tailwind (output.css) -->
+    <link rel="stylesheet" href="/src/output.css">
+</head>
+
+<body  >
+    <div ></div>
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <!-- Hero -->
+    <section
+        class="relative max-sm:bg-[url(/public/images/Banner-mobile.png)] bg-[url(/public/images/BannerImg.png)] bg-cover">
+        <div
+            class="max-w-6xl 2xl:max-w-7xl mx-auto bg-[url(/public/images/HeroImg.png)] bg-center bg-contain bg-no-repeat flex flex-col lg:flex-row items-center justify-between py-5 lg:pt-0 h-screen">
+
+            <div class="w-full max-w-7xl h-[28rem]  flex flex-col items-start text-left justify-between">
+                <div class=" max-w-2xl text-gray-800 p-4 flex flex-col justify-center items-start"
+                    style="clip-path: url(#heroClip1);">
+                    <div class="flex items-center justify-start gap-2">
+                        <span class="size-3 bg-yellow-300"></span>
+                        <span class="text-lg md:text-xl font-semibold ">Welcome to Evaspaces</span>
+                        <span class="w-60 h-0.5 mt-2 bg-black"></span>
+                    </div>
+                    <h1 class="text-3xl md:text-5xl font-bold mb-4">A Boutique Experiential</h1>
+                    <h2 class="text-3xl md:text-5xl mb-6">Co-Working Destination!</h2>
+                    <p class="text-lg mb-6 max-w-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua.</p>
+                    <button
+                        class="bg-[#FAAD00] text-white px-3 py-2 flex  items-center justify-between w-44 rounded-full font-semibold uppercase hover:bg-[#000000] transition-colors duration-500">
+                        <span>LET’S CONNECT</span> <svg width="29" height="29" viewBox="0 0 29 29" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="14.5" cy="14.5" r="14.5" fill="white" />
+                            <path
+                                d="M22.7071 15.7071C23.0976 15.3166 23.0976 14.6834 22.7071 14.2929L16.3431 7.92893C15.9526 7.53841 15.3195 7.53841 14.9289 7.92893C14.5384 8.31946 14.5384 8.95262 14.9289 9.34315L20.5858 15L14.9289 20.6569C14.5384 21.0474 14.5384 21.6805 14.9289 22.0711C15.3195 22.4616 15.9526 22.4616 16.3431 22.0711L22.7071 15.7071ZM6 15V16H22V15V14H6V15Z"
+                                fill="#FAAD00" />
+                        </svg>
+
+                    </button>
+                </div>
+                <div class="w-full max-w-5xl  flex justify-between items-center px-2">
+                    <div class="flex items-center h-fit gap-1 border border-slate-300 rounded-4xl px-4 py-2">
+                        <!-- Avatars -->
+                        <div class="flex -space-x-4">
+                            <img src="/images/emp1.png" alt="User 1"
+                                class="size-12 rounded-full border-2 border-white object-cover" />
+                            <img src="/images/emp2.png" alt="User 2"
+                                class="size-12 rounded-full border-2 border-white object-cover" />
+                            <div
+                                class="size-12 flex items-center justify-center rounded-full bg-yellow-500 text-white text-sm font-medium border-2 border-white">
+                                more
+                            </div>
+                        </div>
+                        <div class="flex flex-col -space-y-2">
+                            <span class="font-bold text-2xl">100+</span>
+                            <span>enjoy working with us</span>
+                        </div>
+                    </div>
+                    <div
+                        class="max-w-fit h-44 bg-[url(/public/images/BannerImg.png)] bg-center bg-cover bg-no-repeat -translate-y-4 mx-auto p-2  rounded-3xl shadow-md  flex flex-col gap-4 sm:flex-row items-stretch">
+                        <!-- Image Section -->
+                        <div class="w-full sm:w-52 h-full">
+                            <img src="/images/bnb.png" alt="Cozy BNB room at EVA Spaces with bed and decor"
+                                loading="lazy" class="w-full h-full object-cover rounded-2xl" />
+                        </div>
+
+                        <!-- Content Section -->
+                        <div class="w-full max-w-48 flex flex-col justify-center p-2  ">
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">BNB</h3>
+                            <p class="text-gray-700 text-sm leading-relaxed mb-2">
+                                Every detail at <strong>EVA Spaces</strong> is crafted to make work feel natural and
+                                welcoming.
+                            </p>
+                            <a href="/bnb"
+                                class="inline-block px-3 py-1 text-white bg-black hover:bg-gray-800 transition rounded-full text-sm font-medium self-start"
+                                aria-label="Explore more about EVA Spaces BNB">
+                                EXPLORE MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- USP -->
+    <section id="usp"
+        class="border-y border-gray-300 bg-[url(/public/images/usp/BG.png)] bg-center bg-cover bg-no-repeat">
+        <div class="max-w-7xl mx-auto px-4 py-12 text-center">
+            <!-- Heading -->
+            <h2 class="text-3xl md:text-4xl  flex items-center justify-center gap-1 font-bold text-gray-900 mb-4">
+                <span class="w-60 h-1 mt-2 bg-black"></span> Unique Selling Proposition <span
+                    class="w-60 h-1 mt-2 bg-black"></span>
+            </h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-10">
+                Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit, Sed Do Eiusmod Tempor Incididunt Ut
+                Labore Et Dolore Magna Aliqua.
+            </p>
+
+            <!-- Cards Grid -->
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <!-- Card 1 -->
+                <div
+                    class="bg-[url(/public/images/cardBg.png)] bg-right bg-cover bg-no-repeat border border-gray-300 rounded-2xl shadow-md overflow-hidden h-full p-4 relative group card-animation">
+                    <div class="p-5 text-left">
+                        <span
+                            class="inline-block bg-yellow-500 text-white text-xs font-semibold px-3 py-2 rounded-full mb-3">
+                            OPEN TO CURATION
+                        </span>
+                        <p class="text-gray-600 mb-4">
+                            Lorem Ipsum Dolor Sit Amet,
+                            Consectetur Adipisicing Elit,
+                            Sed Do
+                        </p>
+                    </div>
+                    <div class="relative h-64">
+                        <img src="/images/USP/usp1.png" alt="Cozy curated room at EVA Spaces"
+                            class="w-full h-60 object-cover rounded-t-2xl group-hover:scale-105 transition duration-500"
+                            loading="lazy">
+                        <div
+                            class="absolute bottom-4 right-4 bg-yellow-500 text-white w-10 h-10 flex items-center justify-center rounded-full shadow-md group-hover:scale-110 transition">
+                            ➝
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="bg-[url(/public/images/cardBg.png)] bg-right bg-cover bg-no-repeat border border-gray-300 rounded-2xl shadow-md overflow-hidden h-full p-4 relative group card-animation">
+                    <div class="p-5 text-left">
+                        <span
+                            class="inline-block bg-yellow-500 text-white text-xs font-semibold px-3 py-2 rounded-full mb-3">
+                            SELECT YOUR SPACE
+                        </span>
+                        <p class="text-gray-600 mb-4">
+                            Lorem Ipsum Dolor Sit Amet,
+                            Consectetur Adipisicing Elit,
+                            Sed Do
+                        </p>
+                    </div>
+                    <div class="relative h-64">
+                        <img src="/images/USP/usp2.png" alt="Cozy curated room at EVA Spaces"
+                            class="w-full h-60 object-cover rounded-t-2xl group-hover:scale-105 transition duration-500"
+                            loading="lazy">
+                        <div
+                            class="absolute bottom-4 right-4 bg-yellow-500 text-white w-10 h-10 flex items-center justify-center rounded-full shadow-md group-hover:scale-110 transition">
+                            ➝
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="bg-[url(/public/images/cardBg.png)] bg-right bg-cover bg-no-repeat border border-gray-300 rounded-2xl shadow-md overflow-hidden h-full p-4 relative group card-animation">
+                    <div class="p-5 text-left">
+                        <span
+                            class="inline-block bg-yellow-500 text-white text-xs font-semibold px-3 py-2 rounded-full mb-3">
+                            WEAR YOUR DESIGN
+                        </span>
+                        <p class="text-gray-600 mb-4">
+                            Lorem Ipsum Dolor Sit Amet,
+                            Consectetur Adipisicing Elit,
+                            Sed Do
+                        </p>
+                    </div>
+                    <div class="relative h-64">
+                        <img src="/images/USP/usp3.png" alt="Cozy curated room at EVA Spaces"
+                            class="w-full h-60 object-cover rounded-t-2xl group-hover:scale-105 transition duration-500"
+                            loading="lazy">
+                        <div
+                            class="absolute bottom-4 right-4 bg-yellow-500 text-white w-10 h-10 flex items-center justify-center rounded-full shadow-md group-hover:scale-110 transition">
+                            ➝
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+ 
+<!-- Services -->
+<section id="services" class="bg-[url(/public/images/usp/BG.png)] bg-center bg-cover bg-no-repeat ">
+    <main class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-12">
+            <div class="mb-8 lg:mb-0">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+                <p class="text-lg text-gray-600 max-w-2xl leading-relaxed">
+                    Inclusive By Design. Our Inclusive & Adaptive Workspaces Foster Equality,
+                    Independence, And Innovation.
+                </p>
+            </div>
+
+            <!-- Custom Navigation -->
+            <div class="navigation-controls flex gap-8">
+                <button id="custom-prev"
+                    class="group flex items-center space-x-2 text-gray-700 hover:text-gray-900 transition-colors duration-200">
+                    <span class="text-lg font-medium">Prev</span>
+                    <div class="w-12 h-0.5 bg-gray-400 group-hover:bg-gray-900 transition-colors duration-200">
+                    </div>
+                </button>
+                <button id="custom-next"
+                    class="group flex items-center space-x-2 text-gray-700 hover:text-gray-900 transition-colors duration-200">
+                    <div class="w-12 h-0.5 bg-gray-400 group-hover:bg-gray-900 transition-colors duration-200">
+                    </div>
+                    <span class="text-lg font-medium">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Swiper Container -->
+        <div class="swiper services-swiper h-96">
+            <div class="swiper-wrapper" id="slides-container">
+                <!-- Services slides will be dynamically inserted here -->
+            </div>
+            <!-- Pagination -->
+            <div class="swiper-pagination mt-8"></div>
+        </div>
+    </main>
+</section>
+
+    <section class="bg-[url(/public/images/usp/BG.png)] bg-center bg-cover bg-no-repeat ">
+        <main class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Our Glimpses</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut
+                    Labore Et Dolore Magna Aliqua.
+                </p>
+            </div>
+            <!-- Swiper Container -->
+            <div class="swiper glimpses-swiper h-96">
+                <div class="swiper-wrapper" id="glimpses-container">
+                    <!-- Glimpses slides will be inserted here -->
+                </div>
+            </div>
+
+            <!-- Custom Navigation -->
+            <div class="navigation-controls">
+                <button id="glimpses-prev" class="nav-button">
+                    <span>Prev</span>
+                    <div class="nav-line"></div>
+                </button>
+                <button id="glimpses-next" class="nav-button">
+                    <div class="nav-line"></div>
+                    <span>Next</span>
+                </button>
+            </div>
+        </main>
+    </section>
+
+    <!-- Glimpses -->
+    <div id="glimpses"></div>
+
+    <!-- Testimonials -->
+    <div id="testimonials"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- JS Loader -->
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
