@@ -4,90 +4,42 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Evaspaces</title> 
+    <title>Evaspaces USPs</title>
 
     <!-- Use compiled Tailwind (output.css) -->
     <link rel="stylesheet" href="/src/output.css">
 </head>
 
-<body  >
-    
+<body>
+
     <!-- Navbar -->
     <div id="navbar"></div>
 
     <!-- Hero -->
     <section
-        class="relative max-sm:bg-[url(/public/images/Banner-mobile.png)] bg-[url(/public/images/BannerImg.png)] bg-cover">
-        <div
-            class="max-w-6xl 2xl:max-w-7xl mx-auto bg-[url(/public/images/HeroImg.png)] bg-center bg-contain bg-no-repeat flex flex-col lg:flex-row items-center justify-between py-5 lg:pt-0 h-screen">
-
-            <div class="w-full max-w-7xl h-[28rem]  flex flex-col items-start text-left justify-between">
-                <div class=" max-w-2xl text-gray-800 p-4 flex flex-col justify-center items-start"
-                    style="clip-path: url(#heroClip1);">
-                    <div class="flex items-center justify-start gap-2">
-                        <span class="size-3 bg-yellow-300"></span>
-                        <span class="text-lg md:text-xl font-semibold ">Welcome to Evaspaces</span>
-                        <span class="w-60 h-0.5 mt-2 bg-black"></span>
-                    </div>
-                    <h1 class="text-3xl md:text-5xl font-bold mb-4">A Boutique Experiential</h1>
-                    <h2 class="text-3xl md:text-5xl mb-6">Co-Working Destination!</h2>
-                    <p class="text-lg mb-6 max-w-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna
-                        aliqua.</p>
-                    <button
-                        class="bg-[#FAAD00] text-white px-3 py-2 flex  items-center justify-between w-44 rounded-full font-semibold uppercase hover:bg-[#000000] transition-colors duration-500">
-                        <span>LET’S CONNECT</span> <svg width="29" height="29" viewBox="0 0 29 29" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="14.5" cy="14.5" r="14.5" fill="white" />
-                            <path
-                                d="M22.7071 15.7071C23.0976 15.3166 23.0976 14.6834 22.7071 14.2929L16.3431 7.92893C15.9526 7.53841 15.3195 7.53841 14.9289 7.92893C14.5384 8.31946 14.5384 8.95262 14.9289 9.34315L20.5858 15L14.9289 20.6569C14.5384 21.0474 14.5384 21.6805 14.9289 22.0711C15.3195 22.4616 15.9526 22.4616 16.3431 22.0711L22.7071 15.7071ZM6 15V16H22V15V14H6V15Z"
-                                fill="#FAAD00" />
-                        </svg>
-
-                    </button>
-                </div>
-                <div class="w-full max-w-5xl  flex justify-between items-center px-2">
-                    <div class="flex items-center h-fit gap-1 border border-slate-300 rounded-4xl px-4 py-2">
-                        <!-- Avatars -->
-                        <div class="flex -space-x-4">
-                            <img src="/images/emp1.png" alt="User 1"
-                                class="size-12 rounded-full border-2 border-white object-cover" />
-                            <img src="/images/emp2.png" alt="User 2"
-                                class="size-12 rounded-full border-2 border-white object-cover" />
-                            <div
-                                class="size-12 flex items-center justify-center rounded-full bg-yellow-500 text-white text-sm font-medium border-2 border-white">
-                                more
-                            </div>
-                        </div>
-                        <div class="flex flex-col -space-y-2">
-                            <span class="font-bold text-2xl">100+</span>
-                            <span>enjoy working with us</span>
-                        </div>
-                    </div>
-                    <div
-                        class="max-w-fit h-44 bg-[url(/public/images/BannerImg.png)] bg-center bg-cover bg-no-repeat -translate-y-4 mx-auto p-2  rounded-3xl shadow-md  flex flex-col gap-4 sm:flex-row items-stretch">
-                        <!-- Image Section -->
-                        <div class="w-full sm:w-52 h-full">
-                            <img src="/images/bnb.png" alt="Cozy BNB room at EVA Spaces with bed and decor"
-                                loading="lazy" class="w-full h-full object-cover rounded-2xl" />
-                        </div>
-
-                        <!-- Content Section -->
-                        <div class="w-full max-w-48 flex flex-col justify-center p-2  ">
-                            <h3 class="text-xl font-bold text-gray-900 mb-1">BNB</h3>
-                            <p class="text-gray-700 text-sm leading-relaxed mb-2">
-                                Every detail at <strong>EVA Spaces</strong> is crafted to make work feel natural and
-                                welcoming.
-                            </p>
-                            <a href="/bnb"
-                                class="inline-block px-3 py-1 text-white bg-black hover:bg-gray-800 transition rounded-full text-sm font-medium self-start"
-                                aria-label="Explore more about EVA Spaces BNB">
-                                EXPLORE MORE
-                            </a>
-                        </div>
-                    </div>
-                </div>
+        class="relative max-sm:bg-[url(/public/images/Banner-mobile.png)] bg-[url(/public/images/BannerImg.png)] bg-cover pt-20">
+    <section class="relative max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 space-y-5 h">
+        <!-- Image Card -->
+        <div class="relative rounded-3xl overflow-hidden shadow-lg">
+            <img src="/public/images/USP/uspPage1.png" alt="Eva Spaces USP Room" class="w-full h-fit object-cover" />
+    
+            <!-- USP Label -->
+            <div class="absolute top-4 left-4 bg-white border border-gray-300 rounded-2xl px-6 py-3 shadow-md">
+                <h3 class="text-6xl font-serif font-semibold text-black">USP</h3>
             </div>
+    
+            <!-- Text Card -->
+            <div class="absolute bottom-6 right-6 bg-white px-6 py-5 max-w-sm rounded-2xl shadow-md">
+                <h4 class="text-xl font-bold text-yellow-600 mb-2">Open To Curation</h4>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Amet eu facilisi posuere ut at cras non ipsum proin nunc purus tellus ultricies
+                    velit elementum ut dui sed augue ultrices phasellus ullamcorper condimentum ut
+                    suspendisse viverra ornare sit venenatis
+                </p>
+            </div>
+        </div>
+    </section>
+
     </section>
 
     <!-- USP -->
@@ -185,14 +137,15 @@
         </div>
     </section>
 
- 
+
     <!-- Services -->
     <section id="services" class="bg-[url(/public/images/Services/BG.png)] bg-center bg-cover bg-no-repeat ">
         <main class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 space-y-5">
             <!-- Header -->
             <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between pt-5">
-                <div class="mb-8 lg:mb-0"> 
-                    <h2 class="text-3xl md:text-4xl  flex items-center justify-start gap-1 font-bold text-gray-900 mb-4">
+                <div class="mb-8 lg:mb-0">
+                    <h2
+                        class="text-3xl md:text-4xl  flex items-center justify-start gap-1 font-bold text-gray-900 mb-4">
                         Our Services <span class="w-60 h-0.5 bg-black"></span>
                     </h2>
                     <p class="text-lg text-gray-600 max-w-2xl leading-relaxed">
@@ -232,10 +185,11 @@
     <section class="bg-[url(/public/images/usp/BG.png)] bg-center bg-cover bg-no-repeat py-10">
         <main class="max-w-7xl mx-auto ">
             <!-- Header -->
-            <div class="text-center py-12"> 
-                 <h2 class="text-3xl md:text-4xl  flex items-center justify-center gap-1 font-bold text-gray-900 mb-4">
-                        <span class="w-60 h-1 mt-2 bg-black"></span> Our Glimpses <span class="w-60 h-1 mt-2 bg-black"></span>
-                    </h2>
+            <div class="text-center py-12">
+                <h2 class="text-3xl md:text-4xl  flex items-center justify-center gap-1 font-bold text-gray-900 mb-4">
+                    <span class="w-60 h-1 mt-2 bg-black"></span> Our Glimpses <span
+                        class="w-60 h-1 mt-2 bg-black"></span>
+                </h2>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
                     Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut
                     Labore Et Dolore Magna Aliqua.
@@ -261,18 +215,10 @@
             </div>
         </main>
     </section>
-
  
 
-
-    <!-- Glimpses -->
-    <div id="glimpses"></div>
-
-    <!-- Testimonials -->
-    <div id="testimonials"></div>
-
     <!-- Footer -->
-    <div id="footer" ></div>
+    <div id="footer"></div>
 
     <!-- JS Loader -->
     <script type="module" src="/src/main.js"></script>
