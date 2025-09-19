@@ -219,6 +219,67 @@ const testimonialsData = [
     avatar: "https://i.pravatar.cc/60?img=3",
   },
 ];
+const clientsData = [
+  { id: 1, logo: "/public/images/clients/talo.png", alt: " talo a client of Eva space coworking space in dehradun " },
+  { id: 2, logo: "/public/images/clients/solid-state.png", alt: " solid state a client of Eva space coworking space in dehradun" },
+  { id: 3, logo: "/public/images/clients/noted.png", alt: "noted a client of Eva space coworking space in dehradun" },
+  { id: 4, logo: "/public/images/clients/goan.png", alt: "goan a client of Eva space coworking space in dehradun" },
+  { id: 5, logo: "/public/images/clients/mowi.png", alt: "mowi a client of Eva space coworking space in dehradun" },
+  { id: 6, logo: "/public/images/clients/talo.png", alt: " talo a client of Eva space coworking space in dehradun " },
+  { id: 7, logo: "/public/images/clients/solid-state.png", alt: " solid state a client of Eva space coworking space in dehradun" },
+  { id: 8, logo: "/public/images/clients/noted.png", alt: "noted a client of Eva space coworking space in dehradun" },
+  { id: 9, logo: "/public/images/clients/goan.png", alt: "goan a client of Eva space coworking space in dehradun" },
+  { id: 10, logo: "/public/images/clients/mowi.png", alt: "mowi a client of Eva space coworking space in dehradun" },
+];
+const coworkingData = [
+  {
+    id: 1,
+    image: "/public/images/services/coworking/space1.png",
+    alt: "Spacious coworking office view",
+  },
+  {
+    id: 2,
+    image: "/public/images/services/coworking/space2.png",
+    alt: "Team working in coworking office",
+  },
+  {
+    id: 3,
+    image: "/public/images/services/coworking/space3.png",
+    alt: "Private cabin inside coworking office",
+  },
+];
+const bnbData = [
+  {
+    id: 1,
+    image: "/public/images/services/bnb/bnb1.png",
+    alt: "Spacious bnb office view",
+  },
+  {
+    id: 2,
+    image: "/public/images/services/bnb/bnb2.png",
+    alt: "Team working in bnb office",
+  },
+  {
+    id: 3,
+    image: "/public/images/services/bnb/bnb3.png",
+    alt: "Private cabin inside bnb office",
+  },
+  {
+    id: 4,
+    image: "/public/images/services/bnb/bnb1.png",
+    alt: "Spacious bnb office view",
+  },
+  {
+    id: 5,
+    image: "/public/images/services/bnb/bnb2.png",
+    alt: "Team working in bnb office",
+  },
+  {
+    id: 6,
+    image: "/public/images/services/bnb/bnb3.png",
+    alt: "Private cabin inside bnb office",
+  },
+];
 
 // === SLIDER CONFIGURATION ===
 const sliderConfigs = {
@@ -288,7 +349,7 @@ const sliderConfigs = {
       modules: [Autoplay, EffectCoverflow],
       effect: "coverflow",
       slidesPerView: 1,
-      spaceBetween:50,
+      spaceBetween: 50,
       grabCursor: true,
       centeredSlides: true,
       loop: true,
@@ -353,6 +414,105 @@ const sliderConfigs = {
       grabCursor: true,
     },
   },
+  clients: {
+    containerSelector: ".clients-swiper",
+    containerId: "clients-container",
+    data: clientsData,
+    slideTemplate: (c) => `
+    <div class="swiper-slide flex justify-center ">
+      <div class="w-40 h-28 hover:scale-95 duration-300 flex items-center justify-center bg-white border border-gray-300 rounded-xl  transition">
+        <img src="${c.logo}" alt="${c.alt}" class="max-h-16 object-contain " loading="lazy" />
+      </div>
+    </div>
+  `,
+    options: {
+      modules: [Pagination, Autoplay],
+      slidesPerView: 2,
+      spaceBetween: 10,
+      loop: true,
+      autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      // pagination: {
+      //   el: ".swiper-pagination",
+      //   clickable: true,
+      //   dynamicBullets: true,
+      // },
+      breakpoints: {
+        640: { slidesPerView: 3 },
+        768: { slidesPerView: 4 },
+        1024: { slidesPerView: 5 },
+      },
+      speed: 600,
+      grabCursor: true,
+    },
+  },
+  coworking:{
+  containerSelector: ".coworking-swiper",
+  containerId: "coworking-container",
+  data: coworkingData,
+  slideTemplate: (c) => `
+    <div class="swiper-slide">
+      <div class="rounded-xl overflow-hidden ">
+        <img src="${c.image}" 
+             alt="${c.alt}" 
+             class="w-full h-96 object-contain aspect-square" 
+             loading="lazy"
+             onerror="this.src='https://via.placeholder.com/600x400?text=Image+Not+Found'"/>
+      </div>
+    </div>
+  `,
+  options: {
+    modules: [Navigation],
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    navigation: {
+      nextEl: "#coworking-next",
+      prevEl: "#coworking-prev",
+    },
+    breakpoints: {
+      640: { slidesPerView: 2 },
+      1024: { slidesPerView: 3},
+    },
+    speed: 600,
+    grabCursor: true,
+  },
+},
+  bnb:{
+  containerSelector: ".bnb-swiper",
+  containerId: "bnb-container",
+  data: bnbData,
+  slideTemplate: (c) => `
+    <div class="swiper-slide">
+      <div class="rounded-xl overflow-hidden ">
+        <img src="${c.image}" 
+             alt="${c.alt}" 
+             class="w-full h-96 object-contain aspect-square" 
+             loading="lazy"
+             onerror="this.src='https://via.placeholder.com/600x400?text=Image+Not+Found'"/>
+      </div>
+    </div>
+  `,
+  options: {
+    modules: [Navigation],
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    navigation: {
+      nextEl: "#bnb-next",
+      prevEl: "#bnb-prev",
+    },
+    breakpoints: {
+      640: { slidesPerView: 2 },
+      1024: { slidesPerView: 3},
+    },
+    speed: 600,
+    grabCursor: true,
+  },
+},
 };
 
 // ✅ Separate initialization function
