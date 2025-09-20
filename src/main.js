@@ -11,7 +11,45 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 
-// ✅ Improved loading with proper error handling and sequencing
+// === UTILITIES ===
+const animations = {
+  fadeIn: (element, duration = 300) => {
+    element.style.opacity = "0";
+    element.style.transform = "translateY(20px)";
+    element.style.transition = `opacity ${duration}ms ease, transform ${duration}ms ease`;
+    requestAnimationFrame(() => {
+      element.style.opacity = "1";
+      element.style.transform = "translateY(0)";
+    });
+  },
+
+  staggerChildren: (container, delay = 80) => {
+    const children = container.querySelectorAll(".swiper-slide");
+    children.forEach((child, index) => {
+      child.style.opacity = "0";
+      child.style.transform = "scale(0.9) translateY(20px)";
+      child.style.transition = "opacity 400ms ease, transform 400ms ease";
+      setTimeout(() => {
+        child.style.opacity = "1";
+        child.style.transform = "scale(1) translateY(0)";
+      }, index * delay);
+    });
+  },
+};
+
+// Global image fallback handler
+function setFallbackImages() {
+  document.querySelectorAll("img").forEach((img) => {
+    if (!img.dataset.fallbackSet) {
+      img.onerror = () => {
+        img.src = "https://via.placeholder.com/400x300?text=Image+Not+Found";
+      };
+      img.dataset.fallbackSet = "true";
+    }
+  });
+}
+
+// Improved partial loader with script deduplication
 async function loadPartial(id, url) {
   try {
     const container = document.getElementById(id);
@@ -28,12 +66,15 @@ async function loadPartial(id, url) {
     const content = await response.text();
     container.innerHTML = content;
 
-    // ✅ Execute any scripts in the loaded content
+    // Execute scripts with deduplication
     const scripts = container.querySelectorAll("script");
     scripts.forEach((script) => {
+      if (!script.textContent.trim() || script.dataset.loaded) return;
+
       const newScript = document.createElement("script");
       newScript.textContent = script.textContent;
-      document.head.appendChild(newScript);
+      newScript.dataset.loaded = "true";
+      document.body.appendChild(newScript);
     });
 
     console.log(`✅ Successfully loaded: ${url}`);
@@ -43,32 +84,6 @@ async function loadPartial(id, url) {
     return false;
   }
 }
-
-// ✅ Load components in parallel with proper error handling
-document.addEventListener("DOMContentLoaded", async () => {
-  console.log("🚀 Starting component loading...");
-
-  try {
-    // Load navbar and footer in parallel since they're independent
-    const [navbarLoaded, footerLoaded] = await Promise.allSettled([
-      loadPartial("navbar", "/src/components/navbar.html"),
-      loadPartial("footer", "/src/components/footer.html"),
-    ]);
-
-    if (navbarLoaded.status === "rejected") {
-      console.error("❌ Navbar failed to load:", navbarLoaded.reason);
-    }
-
-    if (footerLoaded.status === "rejected") {
-      console.error("❌ Footer failed to load:", footerLoaded.reason);
-    }
-
-    // ✅ Initialize sliders after a brief delay to ensure DOM is ready
-    setTimeout(initializeSliders, 100);
-  } catch (error) {
-    console.error("❌ Critical error during component loading:", error);
-  }
-});
 
 // === DATA ===
 const servicesData = [
@@ -115,43 +130,48 @@ const servicesData = [
     link: "/services/events",
   },
 ];
-
 const glimpsesData = [
   {
     id: 1,
     image:
       "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=400&h=500&fit=crop",
     alt: "Community workspace with people collaborating",
+    category: "workspace",
   },
   {
     id: 2,
     image:
       "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=500&fit=crop",
     alt: "Modern bedroom workspace",
+    category: "workspace",
   },
   {
     id: 3,
     image:
       "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=500&fit=crop",
     alt: "Professional meeting room",
+    category: "workspace",
   },
   {
     id: 4,
     image:
       "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=500&fit=crop",
     alt: "Creative workspace with modern design",
+    category: "party",
   },
   {
     id: 5,
     image:
       "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=400&h=500&fit=crop",
     alt: "Comfortable lounge area",
+    category: "bnb",
   },
   {
     id: 6,
     image:
       "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=400&h=500&fit=crop",
     alt: "Event space setup",
+    category: "rooftop",
   },
 ];
 const testimonialsData = [
@@ -280,6 +300,38 @@ const bnbData = [
     alt: "Private cabin inside bnb office",
   },
 ];
+const partyAreaData = [
+  {
+    id: 1,
+    image: "/public/images/services/bnb/bnb1.png",
+    alt: "Spacious bnb office view",
+  },
+  {
+    id: 2,
+    image: "/public/images/services/bnb/bnb2.png",
+    alt: "Team working in bnb office",
+  },
+  {
+    id: 3,
+    image: "/public/images/services/bnb/bnb3.png",
+    alt: "Private cabin inside bnb office",
+  },
+  {
+    id: 4,
+    image: "/public/images/services/bnb/bnb1.png",
+    alt: "Spacious bnb office view",
+  },
+  {
+    id: 5,
+    image: "/public/images/services/bnb/bnb2.png",
+    alt: "Team working in bnb office",
+  },
+  {
+    id: 6,
+    image: "/public/images/services/bnb/bnb3.png",
+    alt: "Private cabin inside bnb office",
+  },
+];
 
 // === SLIDER CONFIGURATION ===
 const sliderConfigs = {
@@ -307,7 +359,7 @@ const sliderConfigs = {
     `,
     options: {
       modules: [Navigation, Pagination, Autoplay],
-      slidesPerView: 1,
+      slidesPerView: "auto",
       spaceBetween: 24,
       loop: true,
       autoplay: {
@@ -330,7 +382,6 @@ const sliderConfigs = {
     },
     controls: { prev: "custom-prev", next: "custom-next" },
   },
-
   glimpses: {
     containerSelector: ".glimpses-swiper",
     containerId: "glimpses-container",
@@ -342,24 +393,25 @@ const sliderConfigs = {
          alt="${glimpse.alt}" 
          class="w-full h-full object-cover" loading="lazy"  onerror="this.src='https://via.placeholder.com/320x384?text=Image+Not+Found'"  />
   </div>
-</div>
-
-    `,
+</div>`,
     options: {
       modules: [Autoplay, EffectCoverflow],
       effect: "coverflow",
-      slidesPerView: 1,
+      slidesPerView: "auto",
       spaceBetween: 50,
       grabCursor: true,
       centeredSlides: true,
       loop: true,
-
-      slidesPerView: "auto",
       coverflowEffect: { rotate: 20, depth: 200, slideShadows: false },
       autoplay: {
         delay: 3500,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
       },
       speed: 600,
     },
@@ -392,7 +444,7 @@ const sliderConfigs = {
   `,
     options: {
       modules: [Pagination, Autoplay],
-      slidesPerView: 1,
+      slidesPerView: "auto",
       spaceBetween: 24,
       loop: true,
       autoplay: {
@@ -449,11 +501,11 @@ const sliderConfigs = {
       grabCursor: true,
     },
   },
-  coworking:{
-  containerSelector: ".coworking-swiper",
-  containerId: "coworking-container",
-  data: coworkingData,
-  slideTemplate: (c) => `
+  coworking: {
+    containerSelector: ".coworking-swiper",
+    containerId: "coworking-container",
+    data: coworkingData,
+    slideTemplate: (c) => `
     <div class="swiper-slide">
       <div class="rounded-xl overflow-hidden ">
         <img src="${c.image}" 
@@ -464,28 +516,28 @@ const sliderConfigs = {
       </div>
     </div>
   `,
-  options: {
-    modules: [Navigation],
-    slidesPerView: 1,
-    spaceBetween: 20,
-    loop: true,
-    navigation: {
-      nextEl: "#coworking-next",
-      prevEl: "#coworking-prev",
+    options: {
+      modules: [Navigation],
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      loop: true,
+      navigation: {
+        nextEl: "#coworking-next",
+        prevEl: "#coworking-prev",
+      },
+      breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      },
+      speed: 600,
+      grabCursor: true,
     },
-    breakpoints: {
-      640: { slidesPerView: 2 },
-      1024: { slidesPerView: 3},
-    },
-    speed: 600,
-    grabCursor: true,
   },
-},
-  bnb:{
-  containerSelector: ".bnb-swiper",
-  containerId: "bnb-container",
-  data: bnbData,
-  slideTemplate: (c) => `
+  bnb: {
+    containerSelector: ".bnb-swiper",
+    containerId: "bnb-container",
+    data: bnbData,
+    slideTemplate: (c) => `
     <div class="swiper-slide">
       <div class="rounded-xl overflow-hidden ">
         <img src="${c.image}" 
@@ -496,56 +548,286 @@ const sliderConfigs = {
       </div>
     </div>
   `,
-  options: {
-    modules: [Navigation],
-    slidesPerView: 1,
-    spaceBetween: 20,
-    loop: true,
-    navigation: {
-      nextEl: "#bnb-next",
-      prevEl: "#bnb-prev",
+    options: {
+      modules: [Navigation],
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      loop: true,
+      navigation: {
+        nextEl: "#bnb-next",
+        prevEl: "#bnb-prev",
+      },
+      breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      },
+      speed: 600,
+      grabCursor: true,
     },
-    breakpoints: {
-      640: { slidesPerView: 2 },
-      1024: { slidesPerView: 3},
-    },
-    speed: 600,
-    grabCursor: true,
   },
-},
+  partyArea: {
+    containerSelector: ".partyArea-swiper",
+    containerId: "partyArea-container",
+    data: partyAreaData,
+    slideTemplate: (c) => `
+    <div class="swiper-slide">
+      <div class="rounded-xl overflow-hidden ">
+        <img src="${c.image}" 
+             alt="${c.alt}" 
+             class="w-full h-96 object-contain aspect-square" 
+             loading="lazy"
+             onerror="this.src='https://via.placeholder.com/600x400?text=Image+Not+Found'"/>
+      </div>
+    </div>
+  `,
+    options: {
+      modules: [Navigation],
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      loop: true,
+      navigation: {
+        nextEl: "#partyArea-next",
+        prevEl: "#partyArea-prev",
+      },
+      breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      },
+      speed: 600,
+      grabCursor: true,
+    },
+  },
 };
 
-// ✅ Separate initialization function
-function initializeSliders() {
-  console.log("🎯 Initializing sliders...");
+// === CORE FUNCTIONS ===
+function renderSlides(config) {
+  const container = document.getElementById(config.containerId);
+  if (!container) {
+    console.warn(`❌ Container ${config.containerId} not found`);
+    return false;
+  }
+  container.innerHTML = config.data.map(config.slideTemplate).join("");
+  return true;
+}
 
-  Object.values(sliderConfigs).forEach((config) => {
-    const container = document.getElementById(config.containerId);
-    if (!container) {
-      console.warn(`⚠️ Slider container "${config.containerId}" not found`);
-      return;
-    }
+function lazyInitSwiper(config, key) {
+  const containerEl = document.querySelector(config.containerSelector);
+  if (!containerEl) return;
 
-    container.innerHTML = config.data.map(config.slideTemplate).join("");
-    const swiper = new Swiper(config.containerSelector, config.options);
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      if (entries[0].isIntersecting) {
+        try {
+          const swiper = new Swiper(config.containerSelector, config.options);
 
-    if (config.controls?.prev && config.controls?.next) {
-      const prevBtn = document.getElementById(config.controls.prev);
-      const nextBtn = document.getElementById(config.controls.next);
+          // Attach navigation if present
+          if (config.controls?.prev && config.controls?.next) {
+            const prevBtn = document.getElementById(config.controls.prev);
+            const nextBtn = document.getElementById(config.controls.next);
+            prevBtn?.addEventListener("click", () => swiper.slidePrev());
+            nextBtn?.addEventListener("click", () => swiper.slideNext());
+          }
 
-      prevBtn?.addEventListener("click", () => swiper.slidePrev());
-      nextBtn?.addEventListener("click", () => swiper.slideNext());
-    }
+          console.log(`✅ ${key} slider initialized lazily`);
+          obs.disconnect();
+        } catch (err) {
+          console.error(`❌ Failed to init ${key} slider:`, err);
+        }
+      }
+    },
+    { threshold: 0.2 }
+  );
 
-    console.log(`✅ Slider "${config.containerId}" initialized`);
+  observer.observe(containerEl);
+}
+
+// Gallery-specific functionality
+let glimpsesSwiper;
+
+function initGlimpsesSwiper(data, isFilterChange = false) {
+  const config = sliderConfigs.glimpses;
+  const container = document.getElementById(config.containerId);
+
+  if (!container) return;
+
+  if (isFilterChange && glimpsesSwiper) {
+    container.style.opacity = "0";
+    container.style.transform = "scale(0.95)";
+    container.style.transition = "opacity 300ms ease, transform 300ms ease";
+
+    setTimeout(() => updateSliderContent(), 300);
+  } else {
+    updateSliderContent();
+  }
+
+  function updateSliderContent() {
+    container.innerHTML = data.map(config.slideTemplate).join("");
+    setFallbackImages();
+
+    if (glimpsesSwiper) glimpsesSwiper.destroy(true, true);
+
+    glimpsesSwiper = new Swiper(config.containerSelector, {
+      ...config.options,
+      navigation: {
+        nextEl: `#${config.controls.next}`,
+        prevEl: `#${config.controls.prev}`,
+      },
+    });
+
+    container.style.opacity = "1";
+    container.style.transform = "scale(1)";
+    setTimeout(() => animations.staggerChildren(container), 100);
+  }
+}
+
+function initializeGalleryTabs() {
+  initGlimpsesSwiper(glimpsesData);
+
+  document.querySelectorAll(".glimpses-tab").forEach((tab, index) => {
+    setTimeout(() => animations.fadeIn(tab, 300), index * 50);
   });
 
-  // ✅ Event delegation for service card clicks
-  document.addEventListener("click", (e) => {
-    const arrow = e.target.closest(".arrow-icon");
-    if (arrow?.dataset?.link) {
-      window.location.href = arrow.dataset.link;
-    }
+  document.querySelectorAll(".glimpses-tab").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      if (btn.classList.contains("animating")) return;
+      btn.classList.add("animating");
+
+      // Update tab styles
+      document.querySelectorAll(".glimpses-tab").forEach((b) => {
+        b.style.transform = "scale(1)";
+        b.style.transition = "all 200ms ease";
+        b.classList.remove("active", "bg-yellow-400", "text-white");
+        b.classList.add("bg-gray-200");
+      });
+
+      btn.style.transform = "scale(1.05)";
+      btn.classList.remove("bg-gray-200");
+      btn.classList.add("active", "bg-yellow-400", "text-white");
+
+      setTimeout(() => {
+        btn.style.transform = "scale(1)";
+        btn.classList.remove("animating");
+      }, 200);
+
+      // Filter data
+      const filter = btn.dataset.filter;
+      const filteredData =
+        filter === "all"
+          ? glimpsesData
+          : glimpsesData.filter((item) => item.category === filter);
+
+      initGlimpsesSwiper(filteredData, true);
+    });
+
+    // Hover effects
+    btn.addEventListener("mouseenter", () => {
+      if (!btn.classList.contains("active")) {
+        btn.style.transform = "translateY(-2px)";
+        btn.style.transition = "transform 200ms ease";
+      }
+    });
+
+    btn.addEventListener("mouseleave", () => {
+      if (!btn.classList.contains("active")) {
+        btn.style.transform = "translateY(0)";
+      }
+    });
   });
 }
-setTimeout(initializeSliders, 100);
+
+// === MAIN INITIALIZATION ===
+document.addEventListener("DOMContentLoaded", async () => {
+  console.log("🚀 Starting component loading...");
+
+  try {
+    const [navbarLoaded, footerLoaded] = await Promise.allSettled([
+      loadPartial("navbar", "/src/components/navbar.html"),
+      loadPartial("footer", "/src/components/footer.html"),
+    ]);
+
+    if (navbarLoaded.status === "rejected") {
+      console.error("❌ Navbar failed to load:", navbarLoaded.reason);
+    }
+    if (footerLoaded.status === "rejected") {
+      console.error("❌ Footer failed to load:", footerLoaded.reason);
+    }
+
+    setTimeout(() => {
+      // Render all slides
+      Object.values(sliderConfigs).forEach((config) => {
+        if (renderSlides(config)) {
+          setFallbackImages();
+        }
+      });
+
+      // Initialize sliders lazily
+      Object.entries(sliderConfigs).forEach(([key, config]) => {
+        if (key !== "glimpses") {
+          // Special handling for glimpses
+          lazyInitSwiper(config, key);
+        }
+      });
+
+      // Initialize gallery tabs
+      initializeGalleryTabs();
+
+      // Service card click handler
+      document.addEventListener("click", (e) => {
+        const arrow = e.target.closest(".arrow-icon");
+        if (arrow?.dataset?.link) {
+          window.location.href = arrow.dataset.link;
+        }
+      });
+
+      console.log("🎯 All components initialized");
+    }, 100);
+  } catch (error) {
+    console.error("❌ Critical error during component loading:", error);
+  }
+});
+
+// Enhanced CSS animations
+const animationStyles = `
+  .glimpses-tab {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .glimpses-tab::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 400ms ease;
+  }
+  
+  .glimpses-tab:hover::before {
+    left: 100%;
+  }
+  
+  .swiper-slide {
+    transition: transform 300ms ease, opacity 300ms ease;
+  }
+  
+  .swiper-slide:hover {
+    transform: translateY(-5px);
+  }
+  
+  .glimpse-card {
+    transition: transform 400ms ease, box-shadow 400ms ease;
+  }
+  
+  .glimpse-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  }
+`;
+
+const styleSheet = document.createElement("style");
+styleSheet.textContent = animationStyles;
+document.head.appendChild(styleSheet);
