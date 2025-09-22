@@ -765,8 +765,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
     const [navbarLoaded, footerLoaded] = await Promise.allSettled([
-      loadPartial("navbar", "/navbar.html"),
-      loadPartial("footer", "/footer.html"),
+      loadPartial("navbar", "navbar.html"),
+      loadPartial("footer", "footer.html"),
     ]);
 
     if (navbarLoaded.status === "rejected") {
