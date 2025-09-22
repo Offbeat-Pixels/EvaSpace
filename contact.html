@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evaspaces Party Area</title>
+
+    <!-- Use compiled Tailwind (output.css) -->
+    <link rel="stylesheet" href="/output.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div id="navbar"></div>
+    <section class="relative max-sm:bg-[url(/images/Banner-mobile.png)] bg-[url(/images/BannerImg.png)] bg-cover pt-32">
+        <main class="relative max-w-7xl mx-auto px-4 py-5 sm:px-6 lg:px-8 space-y-5 ">
+            <div
+                class="max-sm:bg-[url(/images/contactBg.png)] bg-[url(/images/contactBg.svg)] bg-contain bg-no-repeat max-w-5xl mx-auto p-6 md:p-8 ">
+                <!-- Inquiry Form -->
+                <div class="mx-auto w-fit  bg-white border border-gray-300 rounded-2xl px-4 py-1 -translate-y-7">
+                    <h2 class="text-2xl text-center font-bold ">
+                        The property you wish to inquire about
+                    </h2>
+                </div>
+                <form action="#" method="POST" class="bg-transparent rounded-2xl space-y-8">
+                    <!-- Basic Information -->
+                    <fieldset>
+                        <legend class="text-lg font-semibold text-gray-800 mb-4">Basic Information</legend>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="company" class="block text-sm font-medium text-gray-700">Your Company
+                                    Name</label>
+                                <input type="text" id="company" name="company"
+                                    class="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:ring-yellow-500 focus:border-yellow-500"
+                                    required>
+                            </div>
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Your Name</label>
+                                <input type="text" id="name" name="name"
+                                    class="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:ring-yellow-500 focus:border-yellow-500"
+                                    required>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                                <input type="tel" id="phone" name="phone"
+                                    class="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:ring-yellow-500 focus:border-yellow-500"
+                                    required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                                <input type="email" id="email" name="email"
+                                    class="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:ring-yellow-500 focus:border-yellow-500"
+                                    required>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Content of Inquiry -->
+                    <fieldset>
+                        <legend class="text-lg font-semibold text-gray-800 mb-4">Content of Your Inquiry</legend>
+                        <div class="flex items-center justify-start gap-6">
+                            <div >
+                                <label class="block text-sm font-medium text-gray-900 mb-2">Your Request</label>
+                                <div
+                                    class="flex items-center justify-center gap-4 border border-gray-300 shadow-sm rounded-xl px-4 py-2">
+                                    <label class="flex items-center gap-2">
+                                        <input type="radio" name="request" value="tour"
+                                            class="text-yellow-600 focus:ring-yellow-500">
+                                        Request For Tour
+                                    </label>
+                                    <label class="flex items-center gap-2">
+                                        <input type="radio" name="request" value="info"
+                                            class="text-yellow-600 focus:ring-yellow-500">
+                                        Information
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">How You Want To
+                                    Lease</label>
+                                <div
+                                    class="flex items-center justify-center gap-4 border border-gray-300 shadow-sm rounded-xl px-4 py-2">
+                                    <label class="flex items-center gap-2">
+                                        <input type="radio" name="lease" value="furnished"
+                                            class="text-yellow-600 focus:ring-yellow-500">
+                                        Furnished Prefer
+                                    </label>
+                                    <label class="flex items-center gap-2">
+                                        <input type="radio" name="lease" value="unfurnished"
+                                            class="text-yellow-600 focus:ring-yellow-500">
+                                        Unfurnished
+                                    </label>
+                                    <label class="flex items-center gap-2">
+                                        <input type="radio" name="lease" value="undecided"
+                                            class="text-yellow-600 focus:ring-yellow-500">
+                                        Undecided
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="area" class="block text-sm font-medium text-gray-700 ">Desired Area</label>
+                                <select id="area" name="area"
+                                    class="mt-1 w-full rounded-xl px-3 py-2 border-gray-300 shadow-sm focus:ring-yellow-500 focus:border-yellow-500">
+                                    <option value="">Please Select</option>
+                                    <option>Dehradun</option>
+                                    <option>Delhi</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Newsletter -->
+                    <fieldset>
+                        <legend class="text-lg font-semibold text-gray-800 mb-4">Newsletter Subscription</legend>
+                        <div class="space-y-3">
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" name="newsletter" class="text-yellow-600 focus:ring-yellow-500">
+                                I would like to receive the email newsletter (<a href="#"
+                                    class="text-yellow-600 underline">Click
+                                    here</a> for more information)
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" name="privacy" class="text-yellow-600 focus:ring-yellow-500"
+                                    required>
+                                I agree to the handling of personal information
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Submit -->
+                    <div class="flex justify-center translate-y-2">
+                        <button type="submit"
+                            class="px-14 py-2 bg-yellow-500 text-white font-semibold rounded-full shadow hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-400">
+                            Make an Inquiry
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Contact Section -->
+                <section class="mt-12 grid md:grid-cols-2 gap-8 items-start">
+                    <div itemscope itemtype="https://schema.org/LocalBusiness">
+                        <h3 class="text-xl font-semibold mb-4">Prefer a Direct Approach?</h3>
+                        <p class="flex items-center gap-2 mb-2">
+                            📞 <a href="tel:+919412075850" itemprop="telephone"
+                                class="hover:underline">+91-9412075850</a>
+                        </p>
+                        <p class="flex items-center gap-2 mb-2">
+                            📧 <a href="mailto:info@evaspaces.com" itemprop="email"
+                                class="hover:underline">info@evaspaces.com</a>
+                        </p>
+                        <p class="text-gray-600">Monday to Friday, 9AM–6PM (GMT)</p>
+                    </div>
+
+                    <div> 
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6885.162688318476!2d78.08497!3d30.362846!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3908d7178edf62dd%3A0xd35879fde8b59699!2sEvaspaces!5e0!3m2!1sen!2sin!4v1758526691859!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" class="rounded-xl shadow"></iframe>
+                        
+                    </div>
+                </section>
+            </div>
+        </main>
+    </section>
+
+
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- JS Loader -->
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>

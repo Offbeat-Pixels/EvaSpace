@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evaspaces Party Area</title>
+    <!-- Use compiled Tailwind (output.css) -->
+    <link rel="stylesheet" href="/output.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+</head>
+
+<body class="">
+    <!-- Navbar -->
+    <div id="navbar"></div>
+    <section class="relative max-sm:bg-[url(/images/Banner-mobile.png)] bg-[url(/images/BannerImg.png)] bg-cover pt-20">
+        <main class="relative max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 space-y-5 h">
+            <!-- Image Card -->
+            <div class="relative">
+                <img src="/images/Gallery/Banner.png" alt="Eva Spaces USP Room" class="w-full h-fit object-cover" />
+                <!-- USP Label -->
+                <div
+                    class="absolute top-0 left-0 h-32 w-[17rem] bg-[url(/images/cardBg.png)] bg-center bg-cover bg-no-repeat border border-gray-300 rounded-2xl px-6 py-3 flex items-center justify-center">
+                    <h3 class="text-4xl font-serif font-semibold text-black">Our service</h3>
+                </div>
+
+                <!-- Text Card -->
+                <div
+                    class="absolute bottom-0 right-0 bg-[url(/images/cardBg.png)] bg-center bg-cover bg-no-repeat  border border-gray-300 px-10 py-5 w-[25rem] rounded-2xl ">
+                    <h4 class="text-2xl font-bold mb-2">Party Area</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Amet eu facilisi posuere ut at cras non ipsum proin nunc purus tellus ultricies
+                        velit elementum ut dui sed augue ultrices phasellus ullamcorper condimentum ut
+                        suspendisse viverra ornare sit venenatis
+                    </p>
+                </div>
+            </div>
+        </main>
+    </section>
+    <section class="relative bg-white pt-10">
+        <main class="relative max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 space-y-5 h">
+            <div class="flex gap-3 justify-center mb-6">
+                <button class="glimpses-tab active px-4 py-2 rounded-full bg-yellow-400 text-white"
+                    data-filter="all">All</button>
+                <button class="glimpses-tab px-4 py-2 rounded-full bg-gray-200"
+                    data-filter="workspace">Workspace</button>
+                <button class="glimpses-tab px-4 py-2 rounded-full bg-gray-200" data-filter="bnb">BnB</button>
+                <button class="glimpses-tab px-4 py-2 rounded-full bg-gray-200" data-filter="rooftop">Roof Top</button>
+                <button class="glimpses-tab px-4 py-2 rounded-full bg-gray-200" data-filter="party">Party Area</button>
+            </div>
+
+            <!-- Slider Container -->
+            <div class="swiper glimpses-swiper">
+                <div class="swiper-wrapper" id="glimpses-container"></div>
+                <div class="flex justify-center items-center gap-8 pt-10 ">
+                    <button id="glimpses-prev" class="nav-button">
+                        <span>Prev</span>
+                        <div class="nav-line"></div>
+                    </button>
+                    <button id="glimpses-next" class="nav-button">
+                        <div class="nav-line"></div>
+                        <span>Next</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+    </section>
+
+
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- JS Loader -->
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>
