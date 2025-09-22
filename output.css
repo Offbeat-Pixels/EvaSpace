@@ -59,6 +59,7 @@
     --radius-2xl: 1rem;
     --radius-3xl: 1.5rem;
     --radius-4xl: 2rem;
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --blur-sm: 8px;
     --default-transition-duration: 150ms;
@@ -369,6 +370,9 @@
   .inline-block {
     display: inline-block;
   }
+  .table {
+    display: table;
+  }
   .aspect-\[3\/4\] {
     aspect-ratio: 3/4;
   }
@@ -382,6 +386,9 @@
   .size-12 {
     width: calc(var(--spacing) * 12);
     height: calc(var(--spacing) * 12);
+  }
+  .h-0 {
+    height: calc(var(--spacing) * 0);
   }
   .h-0\.5 {
     height: calc(var(--spacing) * 0.5);
@@ -518,6 +525,9 @@
   .flex-1 {
     flex: 1;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .-translate-y-4 {
     --tw-translate-y: calc(var(--spacing) * -4);
     translate: var(--tw-translate-x) var(--tw-translate-y);
@@ -535,6 +545,9 @@
   }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .resize {
+    resize: both;
   }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -758,20 +771,35 @@
   .bg-\[url\(\/images\/BannerImg\.png\)\] {
     background-image: url(/images/BannerImg.png);
   }
+  .bg-\[url\(\/images\/BannerImg\.webp\)\] {
+    background-image: url(/images/BannerImg.webp);
+  }
   .bg-\[url\(\/images\/HeroImg\.png\)\] {
     background-image: url(/images/HeroImg.png);
+  }
+  .bg-\[url\(\/images\/HeroImg\.webp\)\] {
+    background-image: url(/images/HeroImg.webp);
   }
   .bg-\[url\(\/images\/Services\/BG\.png\)\] {
     background-image: url(/images/Services/BG.png);
   }
+  .bg-\[url\(\/images\/Services\/BG\.webp\)\] {
+    background-image: url(/images/Services/BG.webp);
+  }
   .bg-\[url\(\/images\/cardBg\.png\)\] {
     background-image: url(/images/cardBg.png);
+  }
+  .bg-\[url\(\/images\/cardBg\.webp\)\] {
+    background-image: url(/images/cardBg.webp);
   }
   .bg-\[url\(\/images\/contactBg\.svg\)\] {
     background-image: url(/images/contactBg.svg);
   }
   .bg-\[url\(\/images\/usp\/BG\.png\)\] {
     background-image: url(/images/usp/BG.png);
+  }
+  .bg-\[url\(\/images\/usp\/BG\.webp\)\] {
+    background-image: url(/images/usp/BG.webp);
   }
   .bg-contain {
     background-size: contain;
@@ -1005,11 +1033,19 @@
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .backdrop-blur-sm {
     --tw-backdrop-blur: blur(var(--blur-sm));
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .backdrop-filter {
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
@@ -1048,6 +1084,10 @@
   .ease-in-out {
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
+  }
+  .ease-out {
+    --tw-ease: var(--ease-out);
+    transition-timing-function: var(--ease-out);
   }
   .group-hover\:scale-105 {
     &:is(:where(.group):hover *) {
@@ -1292,9 +1332,19 @@
       background-image: url(/images/Banner-mobile.png);
     }
   }
+  .max-sm\:bg-\[url\(\/images\/Banner-mobile\.webp\)\] {
+    @media (width < 40rem) {
+      background-image: url(/images/Banner-mobile.webp);
+    }
+  }
   .max-sm\:bg-\[url\(\/images\/contactBg\.png\)\] {
     @media (width < 40rem) {
       background-image: url(/images/contactBg.png);
+    }
+  }
+  .max-sm\:bg-\[url\(\/images\/contactBg\.webp\)\] {
+    @media (width < 40rem) {
+      background-image: url(/images/contactBg.webp);
     }
   }
   .sm\:w-52 {
@@ -1654,6 +1704,11 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-blur {
   syntax: "*";
   inherits: false;
@@ -1801,6 +1856,7 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-outline-style: solid;
       --tw-blur: initial;
       --tw-brightness: initial;
       --tw-contrast: initial;

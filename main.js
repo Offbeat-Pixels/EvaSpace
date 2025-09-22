@@ -81,7 +81,7 @@ const servicesData = [
     title: "Co-Working Spaces",
     description:
       "Modern and adaptive workspace solutions designed for collaboration and productivity.",
-    image: "/images/Services/service1.png",
+    image: "/images/Services/service1.webp",
     link: "/services/coworking",
   },
   {
@@ -89,7 +89,7 @@ const servicesData = [
     title: "Community & Networking",
     description:
       "Grow your connections with like-minded professionals through curated events.",
-    image: "/images/Services/service2.png",
+    image: "/images/Services/service2.webp",
     link: "/services/community",
   },
   {
@@ -97,7 +97,7 @@ const servicesData = [
     title: "Private Offices",
     description:
       "Flexible and secure private office spaces with premium amenities.",
-    image: "/images/Services/service3.png",
+    image: "/images/Services/service3.webp",
     link: "/services/private-offices",
   },
   {
@@ -231,133 +231,133 @@ const testimonialsData = [
 const clientsData = [
   {
     id: 1,
-    logo: "/images/clients/talo.png",
+    logo: "/images/clients/talo.webp",
     alt: " talo a client of Eva space coworking space in dehradun ",
   },
   {
     id: 2,
-    logo: "/images/clients/solid-state.png",
+    logo: "/images/clients/solid-state.webp",
     alt: " solid state a client of Eva space coworking space in dehradun",
   },
   {
     id: 3,
-    logo: "/images/clients/noted.png",
+    logo: "/images/clients/noted.webp",
     alt: "noted a client of Eva space coworking space in dehradun",
   },
   {
     id: 4,
-    logo: "/images/clients/goan.png",
+    logo: "/images/clients/goan.webp",
     alt: "goan a client of Eva space coworking space in dehradun",
   },
   {
     id: 5,
-    logo: "/images/clients/mowi.png",
+    logo: "/images/clients/mowi.webp",
     alt: "mowi a client of Eva space coworking space in dehradun",
   },
   {
     id: 6,
-    logo: "/images/clients/talo.png",
+    logo: "/images/clients/talo.webp",
     alt: " talo a client of Eva space coworking space in dehradun ",
   },
   {
     id: 7,
-    logo: "/images/clients/solid-state.png",
+    logo: "/images/clients/solid-state.webp",
     alt: " solid state a client of Eva space coworking space in dehradun",
   },
   {
     id: 8,
-    logo: "/images/clients/noted.png",
+    logo: "/images/clients/noted.webp",
     alt: "noted a client of Eva space coworking space in dehradun",
   },
   {
     id: 9,
-    logo: "/images/clients/goan.png",
+    logo: "/images/clients/goan.webp",
     alt: "goan a client of Eva space coworking space in dehradun",
   },
   {
     id: 10,
-    logo: "/images/clients/mowi.png",
+    logo: "/images/clients/mowi.webp",
     alt: "mowi a client of Eva space coworking space in dehradun",
   },
 ];
 const coworkingData = [
   {
     id: 1,
-    image: "/images/services/coworking/space1.png",
+    image: "/images/services/coworking/space1.webp",
     alt: "Spacious coworking office view",
   },
   {
     id: 2,
-    image: "/images/services/coworking/space2.png",
+    image: "/images/services/coworking/space2.webp",
     alt: "Team working in coworking office",
   },
   {
     id: 3,
-    image: "/images/services/coworking/space3.png",
+    image: "/images/services/coworking/space3.webp",
     alt: "Private cabin inside coworking office",
   },
 ];
 const bnbData = [
   {
     id: 1,
-    image: "/images/services/bnb/bnb1.png",
+    image: "/images/services/bnb/bnb1.webp",
     alt: "Spacious bnb office view",
   },
   {
     id: 2,
-    image: "/images/services/bnb/bnb2.png",
+    image: "/images/services/bnb/bnb2.webp",
     alt: "Team working in bnb office",
   },
   {
     id: 3,
-    image: "/images/services/bnb/bnb3.png",
+    image: "/images/services/bnb/bnb3.webp",
     alt: "Private cabin inside bnb office",
   },
   {
     id: 4,
-    image: "/images/services/bnb/bnb1.png",
+    image: "/images/services/bnb/bnb1.webp",
     alt: "Spacious bnb office view",
   },
   {
     id: 5,
-    image: "/images/services/bnb/bnb2.png",
+    image: "/images/services/bnb/bnb2.webp",
     alt: "Team working in bnb office",
   },
   {
     id: 6,
-    image: "/images/services/bnb/bnb3.png",
+    image: "/images/services/bnb/bnb3.webp",
     alt: "Private cabin inside bnb office",
   },
 ];
 const partyAreaData = [
   {
     id: 1,
-    image: "/images/services/bnb/bnb1.png",
+    image: "/images/services/bnb/bnb1.webp",
     alt: "Spacious bnb office view",
   },
   {
     id: 2,
-    image: "/images/services/bnb/bnb2.png",
+    image: "/images/services/bnb/bnb2.webp",
     alt: "Team working in bnb office",
   },
   {
     id: 3,
-    image: "/images/services/bnb/bnb3.png",
+    image: "/images/services/bnb/bnb3.webp",
     alt: "Private cabin inside bnb office",
   },
   {
     id: 4,
-    image: "/images/services/bnb/bnb1.png",
+    image: "/images/services/bnb/bnb1.webp",
     alt: "Spacious bnb office view",
   },
   {
     id: 5,
-    image: "/images/services/bnb/bnb2.png",
+    image: "/images/services/bnb/bnb2.webp",
     alt: "Team working in bnb office",
   },
   {
     id: 6,
-    image: "/images/services/bnb/bnb3.png",
+    image: "/images/services/bnb/bnb3.webp",
     alt: "Private cabin inside bnb office",
   },
 ];
@@ -386,7 +386,7 @@ const sliderConfigs = {
         </div>
       </div>
     `,
-    options: { 
+    options: {
       slidesPerView: "auto",
       spaceBetween: 24,
       loop: true,
@@ -422,7 +422,7 @@ const sliderConfigs = {
          class="w-full h-full object-cover" loading="lazy"  onerror="this.src='https://via.placeholder.com/320x384?text=Image+Not+Found'"  />
   </div>
 </div>`,
-    options: { 
+    options: {
       effect: "coverflow",
       slidesPerView: "auto",
       spaceBetween: 50,
@@ -469,7 +469,7 @@ const sliderConfigs = {
       </div>
     </div>
   `,
-    options: { 
+    options: {
       slidesPerView: "auto",
       spaceBetween: 24,
       loop: true,
@@ -503,7 +503,7 @@ const sliderConfigs = {
       </div>
     </div>
   `,
-    options: { 
+    options: {
       slidesPerView: 2,
       spaceBetween: 10,
       loop: true,
@@ -541,7 +541,7 @@ const sliderConfigs = {
       </div>
     </div>
   `,
-    options: { 
+    options: {
       slidesPerView: "auto",
       spaceBetween: 20,
       loop: true,
@@ -572,7 +572,7 @@ const sliderConfigs = {
       </div>
     </div>
   `,
-    options: { 
+    options: {
       slidesPerView: "auto",
       spaceBetween: 20,
       loop: true,
@@ -603,7 +603,7 @@ const sliderConfigs = {
       </div>
     </div>
   `,
-    options: { 
+    options: {
       slidesPerView: "auto",
       spaceBetween: 20,
       loop: true,
