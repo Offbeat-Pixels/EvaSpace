@@ -31,7 +31,8 @@ function setFallbackImages() {
   document.querySelectorAll("img").forEach((img) => {
     if (!img.dataset.fallbackSet) {
       img.onerror = () => {
-        img.src = "https://via.placeholder.com/400x300?text=Image+Not+Found";
+        img.src =
+          "https://img.freepik.com/free-vector/404-error-with-man-cones_24908-77788.jpg?t=st=1758540375~exp=1758543975~hmac=7ace41be601e9463efc9ea66207b7b8d903a0bcd0b3ea583fe508bb5e8ce3e82&w=1480";
       };
       img.dataset.fallbackSet = "true";
     }
@@ -81,42 +82,24 @@ const servicesData = [
     title: "Co-Working Spaces",
     description:
       "Modern and adaptive workspace solutions designed for collaboration and productivity.",
-    image: "/images/Services/service1.webp",
-    link: "/services/coworking",
+    image: "images/Services/service1.webp",
+    link: "/Services/coworking",
   },
   {
     id: 2,
     title: "Community & Networking",
     description:
       "Grow your connections with like-minded professionals through curated events.",
-    image: "/images/Services/service2.webp",
-    link: "/services/community",
+    image: "images/Services/service2.webp",
+    link: "/Services/community",
   },
   {
     id: 3,
     title: "Private Offices",
     description:
       "Flexible and secure private office spaces with premium amenities.",
-    image: "/images/Services/service3.webp",
-    link: "/services/private-offices",
-  },
-  {
-    id: 4,
-    title: "Meeting Rooms",
-    description:
-      "Professional meeting spaces equipped with modern technology for presentations.",
-    image:
-      "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop",
-    link: "/services/meeting-rooms",
-  },
-  {
-    id: 5,
-    title: "Event Spaces",
-    description:
-      "Versatile venues for workshops, seminars, and corporate events.",
-    image:
-      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop",
-    link: "/services/events",
+    image: "images/Services/service3.webp",
+    link: "/Services/private-offices",
   },
 ];
 const glimpsesData = [
@@ -231,133 +214,133 @@ const testimonialsData = [
 const clientsData = [
   {
     id: 1,
-    logo: "/images/clients/talo.webp",
+    logo: "images/Clients/talo.webp",
     alt: " talo a client of Eva space coworking space in dehradun ",
   },
   {
     id: 2,
-    logo: "/images/clients/solid-state.webp",
+    logo: "images/Clients/solid-state.webp",
     alt: " solid state a client of Eva space coworking space in dehradun",
   },
   {
     id: 3,
-    logo: "/images/clients/noted.webp",
+    logo: "images/Clients/noted.webp",
     alt: "noted a client of Eva space coworking space in dehradun",
   },
   {
     id: 4,
-    logo: "/images/clients/goan.webp",
+    logo: "images/Clients/goan.webp",
     alt: "goan a client of Eva space coworking space in dehradun",
   },
   {
     id: 5,
-    logo: "/images/clients/mowi.webp",
+    logo: "images/Clients/mowi.webp",
     alt: "mowi a client of Eva space coworking space in dehradun",
   },
   {
     id: 6,
-    logo: "/images/clients/talo.webp",
+    logo: "images/Clients/talo.webp",
     alt: " talo a client of Eva space coworking space in dehradun ",
   },
   {
     id: 7,
-    logo: "/images/clients/solid-state.webp",
+    logo: "images/Clients/solid-state.webp",
     alt: " solid state a client of Eva space coworking space in dehradun",
   },
   {
     id: 8,
-    logo: "/images/clients/noted.webp",
+    logo: "images/Clients/noted.webp",
     alt: "noted a client of Eva space coworking space in dehradun",
   },
   {
     id: 9,
-    logo: "/images/clients/goan.webp",
+    logo: "images/Clients/goan.webp",
     alt: "goan a client of Eva space coworking space in dehradun",
   },
   {
     id: 10,
-    logo: "/images/clients/mowi.webp",
+    logo: "images/Clients/mowi.webp",
     alt: "mowi a client of Eva space coworking space in dehradun",
   },
 ];
 const coworkingData = [
   {
     id: 1,
-    image: "/images/services/coworking/space1.webp",
+    image: "images/Services/coworking/space1.webp",
     alt: "Spacious coworking office view",
   },
   {
     id: 2,
-    image: "/images/services/coworking/space2.webp",
+    image: "images/Services/coworking/space2.webp",
     alt: "Team working in coworking office",
   },
   {
     id: 3,
-    image: "/images/services/coworking/space3.webp",
+    image: "images/Services/coworking/space3.webp",
     alt: "Private cabin inside coworking office",
   },
 ];
 const bnbData = [
   {
     id: 1,
-    image: "/images/services/bnb/bnb1.webp",
+    image: "images/Services/bnb/bnb1.webp",
     alt: "Spacious bnb office view",
   },
   {
     id: 2,
-    image: "/images/services/bnb/bnb2.webp",
+    image: "images/Services/bnb/bnb2.webp",
     alt: "Team working in bnb office",
   },
   {
     id: 3,
-    image: "/images/services/bnb/bnb3.webp",
+    image: "images/Services/bnb/bnb3.webp",
     alt: "Private cabin inside bnb office",
   },
   {
     id: 4,
-    image: "/images/services/bnb/bnb1.webp",
+    image: "images/Services/bnb/bnb1.webp",
     alt: "Spacious bnb office view",
   },
   {
     id: 5,
-    image: "/images/services/bnb/bnb2.webp",
+    image: "images/Services/bnb/bnb2.webp",
     alt: "Team working in bnb office",
   },
   {
     id: 6,
-    image: "/images/services/bnb/bnb3.webp",
+    image: "images/Services/bnb/bnb3.webp",
     alt: "Private cabin inside bnb office",
   },
 ];
 const partyAreaData = [
   {
     id: 1,
-    image: "/images/services/bnb/bnb1.webp",
+    image: "images/Services/bnb/bnb1.webp",
     alt: "Spacious bnb office view",
   },
   {
     id: 2,
-    image: "/images/services/bnb/bnb2.webp",
+    image: "images/Services/bnb/bnb2.webp",
     alt: "Team working in bnb office",
   },
   {
     id: 3,
-    image: "/images/services/bnb/bnb3.webp",
+    image: "images/Services/bnb/bnb3.webp",
     alt: "Private cabin inside bnb office",
   },
   {
     id: 4,
-    image: "/images/services/bnb/bnb1.webp",
+    image: "images/Services/bnb/bnb1.webp",
     alt: "Spacious bnb office view",
   },
   {
     id: 5,
-    image: "/images/services/bnb/bnb2.webp",
+    image: "images/Services/bnb/bnb2.webp",
     alt: "Team working in bnb office",
   },
   {
     id: 6,
-    image: "/images/services/bnb/bnb3.webp",
+    image: "images/Services/bnb/bnb3.webp",
     alt: "Private cabin inside bnb office",
   },
 ];
@@ -372,9 +355,9 @@ const sliderConfigs = {
       <div class="swiper-slide">
         <div class="relative rounded-2xl overflow-hidden h-full group ">
           <div class="relative">
-            <img src="${service.image}" alt="${service.title}" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Image+Not+Found'">
+            <img src="${service.image}" alt="${service.title}" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.freepik.com/free-vector/404-error-with-man-cones_24908-77788.jpg?t=st=1758540375~exp=1758543975~hmac=7ace41be601e9463efc9ea66207b7b8d903a0bcd0b3ea583fe508bb5e8ce3e82&w=1480'">
           </div>
-          <div data-link="${service.link}" class="arrow-icon cursor-pointer absolute top-4 right-4 bg-yellow-500 text-white w-10 h-10 flex items-center justify-center rounded-full shadow-md transition-transform duration-200 group-hover:scale-110">
+          <div data-link="${service.link}" class="arrow-icon cursor-pointer absolute top-0 right-0 bg-yellow-500 text-white w-10 h-10 flex items-center justify-center rounded-full shadow-md transition-transform duration-200 group-hover:text-black">
             →
           </div>
           <div class="absolute left-4 bottom-4 right-4">
@@ -389,21 +372,10 @@ const sliderConfigs = {
     options: {
       slidesPerView: "auto",
       spaceBetween: 24,
-      loop: true,
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        dynamicBullets: true,
-      },
       breakpoints: {
         640: { slidesPerView: 1.5 },
         768: { slidesPerView: 2 },
-        1024: { slidesPerView: 2.5 },
+        1024: { slidesPerView: 3 },
       },
       speed: 600,
       grabCursor: true,
@@ -419,7 +391,7 @@ const sliderConfigs = {
   <div class="glimpse-card aspect-[3/4] rounded-2xl overflow-hidden">
     <img src="${glimpse.image}" 
          alt="${glimpse.alt}" 
-         class="w-full h-full object-cover" loading="lazy"  onerror="this.src='https://via.placeholder.com/320x384?text=Image+Not+Found'"  />
+         class="w-full h-full object-cover" loading="lazy"  onerror="this.src='https://img.freepik.com/free-vector/404-error-with-man-cones_24908-77788.jpg?t=st=1758540375~exp=1758543975~hmac=7ace41be601e9463efc9ea66207b7b8d903a0bcd0b3ea583fe508bb5e8ce3e82&w=1480'"  />
   </div>
 </div>`,
     options: {
@@ -485,8 +457,8 @@ const sliderConfigs = {
       },
       breakpoints: {
         640: { slidesPerView: 2 },
-        768: { slidesPerView: 3 },
-        1024: { slidesPerView: 5 },
+        768: { slidesPerView: 4},
+        1280: { slidesPerView: 5 },
       },
       speed: 600,
       grabCursor: true,
@@ -537,7 +509,7 @@ const sliderConfigs = {
              alt="${c.alt}" 
              class="w-full h-96 object-contain aspect-square" 
              loading="lazy"
-             onerror="this.src='https://via.placeholder.com/600x400?text=Image+Not+Found'"/>
+             onerror="this.src='https://img.freepik.com/free-vector/404-error-with-man-cones_24908-77788.jpg?t=st=1758540375~exp=1758543975~hmac=7ace41be601e9463efc9ea66207b7b8d903a0bcd0b3ea583fe508bb5e8ce3e82&w=1480'"/>
       </div>
     </div>
   `,
@@ -568,7 +540,7 @@ const sliderConfigs = {
              alt="${c.alt}" 
              class="w-full h-96 object-contain aspect-square" 
              loading="lazy"
-             onerror="this.src='https://via.placeholder.com/600x400?text=Image+Not+Found'"/>
+             onerror="this.src='https://img.freepik.com/free-vector/404-error-with-man-cones_24908-77788.jpg?t=st=1758540375~exp=1758543975~hmac=7ace41be601e9463efc9ea66207b7b8d903a0bcd0b3ea583fe508bb5e8ce3e82&w=1480'"/>
       </div>
     </div>
   `,
@@ -599,7 +571,7 @@ const sliderConfigs = {
              alt="${c.alt}" 
              class="w-full h-96 object-contain aspect-square" 
              loading="lazy"
-             onerror="this.src='https://via.placeholder.com/600x400?text=Image+Not+Found'"/>
+             onerror="this.src='https://img.freepik.com/free-vector/404-error-with-man-cones_24908-77788.jpg?t=st=1758540375~exp=1758543975~hmac=7ace41be601e9463efc9ea66207b7b8d903a0bcd0b3ea583fe508bb5e8ce3e82&w=1480'"/>
       </div>
     </div>
   `,
