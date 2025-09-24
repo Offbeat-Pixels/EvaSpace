@@ -12,26 +12,29 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 </head>
 
-<body>
-
+<body class="overflow-x-hidden">
     <!-- Navbar -->
     <div id="navbar"></div>
     <section class="relative max-sm:bg-[url(images/Banner-mobile.webp)] bg-[url(images/BannerImg.webp)] bg-cover pt-20">
-        <main class="relative max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 space-y-5 h">
+        <main class="relative max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 py-6 md:py-12 space-y-5">
             <!-- Image Card -->
             <div class="relative">
-                <img src="images/USP/uspPage1.webp" alt="Eva Spaces USP Room" class="w-full h-fit object-cover" />
+                <img src="images/USP/uspPage1.webp" alt="Eva Spaces USP Room"
+                    class="w-full h-fit object-cover hidden sm:block" />
+                <img src="images/USP/uspPage1-mobile.png" alt="Eva Spaces USP Room"
+                    class="w-full h-fit object-cover block sm:hidden" />
+    
                 <!-- USP Label -->
                 <div
-                    class="absolute top-0 left-0 h-32 w-[17rem] bg-[url(images/cardBg.webp)] bg-center bg-cover bg-no-repeat border border-gray-300 rounded-2xl px-6 py-3 flex items-center justify-center">
-                    <h3 class="text-4xl  font-semibold text-black">USP</h3>
+                    class="absolute  top-0 left-0 h-[12%] sm:h-[20%] w-[45%] sm:w-[22%] bg-[url(images/cardBg.webp)] bg-center bg-cover bg-no-repeat border border-gray-300 rounded-2xl px-4 sm:px-6 py-2 sm:py-3 flex items-center justify-center">
+                    <h3 class="text-lg sm:text-2xl xl:text-4xl font-semibold text-black">USP</h3>
                 </div>
-
+    
                 <!-- Text Card -->
                 <div
-                    class="absolute bottom-0 right-0 bg-[url(images/cardBg.webp)] bg-center bg-cover bg-no-repeat  border border-gray-300 px-10 py-5 w-[25rem] rounded-2xl ">
-                    <h4 class="text-xl font-bold text-yellow-600 mb-2">Open To Curation</h4>
-                    <p class="text-gray-600 text-sm leading-relaxed">
+                    class="absolute bottom-0 right-0 bg-[url(images/cardBg.webp)] bg-center bg-cover bg-no-repeat border border-gray-300 p-4  h-[30%] sm:h-[35%] w-[55%] sm:w-[33%] rounded-2xl overflow-clip">
+                    <h4 class="text-base sm:text-xl md:text-2xl font-bold mb-1 md:mb-2">Open To Curation</h4>
+                    <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
                         Amet eu facilisi posuere ut at cras non ipsum proin nunc purus tellus ultricies
                         velit elementum ut dui sed augue ultrices phasellus ullamcorper condimentum ut
                         suspendisse viverra ornare sit venenatis
@@ -39,52 +42,40 @@
                 </div>
             </div>
         </main>
-        <div class="max-w-7xl mx-auto px-4 ">
-            <div class="text-black font-semibold max-w-3xl mr-auto text-left space-y-3">
-                <h2 class="text-3xl md:text-4xl  flex items-center justify-start font-bold text-gray-900 mb-4">
-                    How We Make Work Better for Everyone
-                </h2>
+    
+        <!-- Text Content -->
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-6 px-4 lg:px-2">
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-yellow-400">
+                How We Make <br> Work Better for Everyone
+            </h2>
+            <div class="text-black font-semibold max-w-2xl ml-auto text-left space-y-6 text-sm md:text-base">
                 <p>
                     At EvaSpaces, we design inclusive, RPWD-compliant workspaces and interiors that are both functional
-                    and
-                    inspiring.
-                    Specializing in disability-friendly construction, accessible coworking, and barrier-free design, we
-                    empower
-                    every
-                    individual to work, connect, and thrive.
-                </p>
-
-                <p>
-                    We graduated to creating office spaces from hosting homes on Airbnb. Hosting has been an incredibly
-                    rewarding experience
-                    for us. We carry the same ethos to our office space business. Whether you're welcoming guests into
-                    your home
-                    for a stay
-                    or clients into your workspaces . At its core, great hosting is about creating a welcoming
-                    atmosphere,
-                    making people
-                    feel comfortable, and ensuring that the workspaces adapts to the need of its users. In a world full
-                    of
-                    commercial
-                    overtures , a warm and personalised touch goes a long way in making your clients feel truly special.
+                    and inspiring. Specializing in disability-friendly construction, accessible coworking, and
+                    barrier-free design.
                 </p>
                 <p>
-                    We both ensure that each & every item in our office spaces is handpicked. We would like to give an
-                    experience to our
-                    clients, so that they love coming back to work !
+                    We started with Airbnb hosting, bringing that warm, welcoming ethos to our office space business.
+                    Whether it’s guests in your home or clients in your workspace, we believe a personalized touch
+                    makes the experience truly special.
+                </p>
+                <p>
+                    Every item in our spaces is handpicked to create an environment people love coming back to.
                 </p>
             </div>
         </div>
     </section>
 
     <section id="services" class="bg-[url(images/Services/BG.webp)] bg-center bg-cover bg-no-repeat ">
-        <main class="max-w-6xl mx-auto px-6 py-16">
+        <main class="max-w-6xl mx-auto px-2 md:px-6 py-8 md:py-16">
             <div class="relative">
-                <img src="images/USP/uspPage2.webp" alt="Workspace" class="w-full" />
+                <img src="images/USP/uspPage2.webp" alt="Workspace" class="w-full h-fit object-cover hidden md:block" />
+                <img src="images/USP/uspPage2-mobile.png" alt="Workspace"
+                    class="w-full h-fit object-cover block md:hidden" />
                 <div
-                    class="absolute bottom-0 left-0 bg-[url(images/cardBg.webp)] bg-center bg-cover bg-no-repeat  border border-gray-300 rounded-2xl px-10 py-5 h-48 w-[23rem]">
-                    <h3 class="text-xl font-bold text-yellow-500 mb-2">Select Your Space</h3>
-                    <p class="text-gray-600 text-sm">
+                    class="absolute bottom-0 left-0 bg-[url(images/cardBg.webp)] bg-center bg-cover bg-no-repeat  border border-gray-300 rounded-2xl p-2 md:p-4 h-[35%] w-[55%] md:w-[33%] overflow-clip">
+                    <h3 class="text-base md:text-xl font-bold text-yellow-500 mb-2">Select Your Space</h3>
+                    <p class="text-gray-600 text-xs md:text-sm">
                         Amet eu facilisi posuere ut at cras non ipsum proin nunc purus tellus
                         ultricies velit elementum ut dui sed augue ultrices phasellus
                         ullamcorper condimentum ut suspendisse viverra ornare sit venenatis
@@ -130,17 +121,20 @@
         </div>
     </section>
 
-    <section class="relative max-sm:bg-[url(images/Banner-mobile.webp)] bg-[url(images/BannerImg.webp)] bg-cover pt-20">
-        <main class="relative max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 space-y-5 h">
+    <section
+        class="relative max-sm:bg-[url(images/Banner-mobile.webp)] bg-[url(images/BannerImg.webp)] bg-cover md:pt-20">
+        <main class="relative max-w-7xl mx-auto px-4 py-6 md:py-12 sm:px-6 lg:px-8 space-y-5 h">
             <!-- Image Card -->
             <div class="relative">
-                <img src="images/USP/uspPage3.webp" alt="Eva Spaces USP Room" class="w-full h-fit object-cover" />
-
+                <img src="images/USP/uspPage3.webp" alt="Eva Spaces USP Room"
+                    class="w-full h-fit object-cover hidden md:block" />
+                <img src="images/USP/uspPage3-mobile.png" alt="Eva Spaces USP Room"
+                    class="w-full h-fit object-cover block md:hidden" />
                 <!-- Text Card -->
                 <div
-                    class="absolute bottom-0 right-0 bg-[url(images/cardBg.webp)] bg-center bg-cover bg-no-repeat  border border-gray-300 px-10 py-5 w-[25rem] rounded-2xl ">
-                    <h4 class="text-xl font-bold text-yellow-600 mb-2">Open To Curation</h4>
-                    <p class="text-gray-600 text-sm leading-relaxed">
+                    class="absolute bottom-0 right-0 bg-[url(images/cardBg.webp)] bg-center bg-cover bg-no-repeat  border border-gray-300 md:px-10 md:py-5 w-[60%] md:w-[25rem] rounded-2xl ">
+                    <h4 class="text-xl font-bold text-yellow-600 md:mb-2">Open To Curation</h4>
+                    <p class="text-gray-600 text-xs md:text-sm leading-relaxed">
                         Amet eu facilisi posuere ut at cras non ipsum proin nunc purus tellus ultricies
                         velit elementum ut dui sed augue ultrices phasellus ullamcorper condimentum ut
                         suspendisse viverra ornare sit venenatis

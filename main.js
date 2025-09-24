@@ -450,14 +450,10 @@ const sliderConfigs = {
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
       },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        dynamicBullets: true,
-      },
+     
       breakpoints: {
         640: { slidesPerView: 2 },
-        768: { slidesPerView: 4},
+        768: { slidesPerView: 3},
         1280: { slidesPerView: 5 },
       },
       speed: 600,
@@ -484,11 +480,6 @@ const sliderConfigs = {
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
       },
-      // pagination: {
-      //   el: ".swiper-pagination",
-      //   clickable: true,
-      //   dynamicBullets: true,
-      // },
       breakpoints: {
         640: { slidesPerView: 3 },
         768: { slidesPerView: 4 },

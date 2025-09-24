@@ -13,36 +13,63 @@
 
 <body class="">
     <!-- Navbar -->
-    <div id="navbar"></div>
-    <section class="relative max-sm:bg-[url(images/Banner-mobile.webp)] bg-[url(images/BannerImg.webp)] bg-cover pt-20">
-        <main class="relative max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 space-y-5 h">
-            <!-- Image Card -->
-            <div class="relative">
-                <img src="images/Gallery/Banner.webp" alt="Eva Spaces USP Room" class="w-full h-fit object-cover"
-                    loading="lazy" />
-                <!-- USP Label -->
-                <div
-                    class="absolute top-0 left-0 h-32 w-[17rem] bg-[url(images/cardBg.webp)] bg-center bg-cover bg-no-repeat border border-gray-300 rounded-2xl px-6 py-3 flex items-center justify-center">
-                    <h3 class="text-4xl  font-semibold text-black">Our service</h3>
-                </div>
+    <div id="navbar"></div> 
 
-                <!-- Text Card -->
-                <div
-                    class="absolute bottom-0 right-0 bg-[url(images/cardBg.webp)] bg-center bg-cover bg-no-repeat  border border-gray-300 px-10 py-5 w-[25rem] rounded-2xl ">
-                    <h4 class="text-2xl font-bold mb-2">Party Area</h4>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Amet eu facilisi posuere ut at cras non ipsum proin nunc purus tellus ultricies
-                        velit elementum ut dui sed augue ultrices phasellus ullamcorper condimentum ut
-                        suspendisse viverra ornare sit venenatis
-                    </p>
-                </div>
+<section class="relative max-sm:bg-[url(images/Banner-mobile.webp)] bg-[url(images/BannerImg.webp)] bg-cover pt-20">
+    <main class="relative max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 py-6 md:py-12 space-y-5">
+        <!-- Image Card -->
+        <div class="relative">
+            <img src="images/Gallery/Banner.webp" alt="Eva Spaces USP Room"
+                class="w-full h-fit object-cover hidden sm:block" />
+            <img src="images/USP/uspPage1-mobile.png" alt="Eva Spaces USP Room"
+                class="w-full h-fit object-cover block sm:hidden" />
+
+            <!-- USP Label -->
+            <div
+                class="absolute  top-0 left-0 h-[12%] sm:h-[20%] w-[45%] sm:w-[22%] bg-[url(images/cardBg.webp)] bg-center bg-cover bg-no-repeat border border-gray-300 rounded-2xl px-4 sm:px-6 py-2 sm:py-3 flex items-center justify-center">
+                <h3 class="text-lg sm:text-2xl xl:text-4xl font-semibold text-black">Our Service</h3>
             </div>
-        </main>
-    </section>
-    <section class="relative bg-white pt-10">
-        <main class="relative max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 space-y-5 h">
-            <div class="flex gap-3 justify-center mb-6">
-                <button class="glimpses-tab active px-4 py-2 rounded-full bg-yellow-400 text-white"
+
+            <!-- Text Card -->
+            <div
+                class="absolute bottom-0 right-0 bg-[url(images/cardBg.webp)] bg-center bg-cover bg-no-repeat border border-gray-300 p-4  h-[30%] sm:h-[35%] w-[55%] sm:w-[33%] rounded-2xl overflow-clip">
+                <h4 class="text-base sm:text-xl md:text-2xl font-bold mb-1 md:mb-2">BNB</h4>
+                <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                    Amet eu facilisi posuere ut at cras non ipsum proin nunc purus tellus ultricies
+                    velit elementum ut dui sed augue ultrices phasellus ullamcorper condimentum ut
+                    suspendisse viverra ornare sit venenatis
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Text Content -->
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-6 px-4 lg:px-2">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-yellow-400">
+            How We Make <br> Work Better for Everyone
+        </h2>
+        <div class="text-black font-semibold max-w-2xl ml-auto text-left space-y-6 text-sm md:text-base">
+            <p>
+                At EvaSpaces, we design inclusive, RPWD-compliant workspaces and interiors that are both functional
+                and inspiring. Specializing in disability-friendly construction, accessible coworking, and
+                barrier-free design.
+            </p>
+            <p>
+                We started with Airbnb hosting, bringing that warm, welcoming ethos to our office space business.
+                Whether it’s guests in your home or clients in your workspace, we believe a personalized touch
+                makes the experience truly special.
+            </p>
+            <p>
+                Every item in our spaces is handpicked to create an environment people love coming back to.
+            </p>
+        </div>
+    </div>
+</section>
+
+ <section class="relative bg-white md:pt-10">
+        <main class="relative max-w-7xl mx-auto px-2 py-6 md:py-12 sm:px-6 lg:px-8 space-y-5 h">
+            <div class="flex flex-wrap  w-[80%] gap-3 justify-center mb-6">
+                <button class="glimpses-tab active  px-4 py-2 rounded-full bg-yellow-400 text-white"
                     data-filter="all">All</button>
                 <button class="glimpses-tab px-4 py-2 rounded-full bg-gray-200"
                     data-filter="workspace">Workspace</button>
@@ -67,7 +94,7 @@
             </div>
         </main>
 
-    </section>
+ </section>
 
 
 
