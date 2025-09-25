@@ -26,40 +26,11 @@
                 <li><a href="/index.html" class="text-green-600">HOME</a></li>
                 <li><a href="/about.html" class="text-gray-700 hover:text-green-600">ABOUT US</a></li>
                 <li><a href="/usp.html" class="text-gray-700 hover:text-green-600">USP</a></li>
-        <li class="relative group">
-            <!-- Parent Link -->
-            <a href="/co-working-workspaces.html" class="text-gray-700 hover:text-green-600 flex items-center">
-                SERVICES
-                <svg class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180" fill="none"
-                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
-            </a>
-        
-            <!-- Dropdown Menu -->
-            <ul
-                class="absolute left-0 top-full mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out z-50">
-                <li>
-                    <a href="/co-working-workspaces.html"
-                        class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-600">
-                        Co-Working Spaces
-                    </a>
-                </li>
-                <li>
-                    <a href="/bnb.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-600">
-                        BNB
-                    </a>
-                </li>
-                <li>
-                    <a href="/party-area.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-600">
-                        Party Area
-                    </a>
-                </li>
-            </ul>
-        </li>
-
+                <li><a href="/services.html" class="text-gray-700 hover:text-green-600">SERVICES</a></li>
                 <li><a href="/gallery.html" class="text-gray-700 hover:text-green-600">GALLERY</a></li>
-                <li>  <a href="/contact.html" class="bg-yellow-500 hover:bg-yellow-600 text-white px-5 py-2 rounded-full font-semibold shadow"> SCHEDULE A CALL </a> </li>
+                <li> <a href="/contact.html"
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-5 py-2 rounded-full font-semibold shadow">
+                        SCHEDULE A CALL </a> </li>
             </ul>
 
             <!-- Mobile Menu Button -->
@@ -76,31 +47,10 @@
             class="hidden bg-white rounded-2xl transform-fill flex-col items-start space-y-4 p-10 transition-all duration-300 ease-in-out">
             <a href="/" class="text-green-600">HOME</a>
             <a href="usp.html" class="text-gray-700 hover:text-green-600">USP</a>
-             <a href="about.html"
-                class="text-gray-700 hover:text-green-600">ABOUT US</a>
-            <!-- Dropdown Parent -->
-            <div class=" ">
-                <button id="services-btn" class="text-gray-700 hover:text-green-600 flex items-center space-x-2">
-                    <span>SERVICES</span>
-                    <svg width="10" height="5" viewBox="0 0 10 5" fill="none" id="arrow-svg" class="w-4 h-4 transition-transform duration-300" >
-                        <path d="M0 0L5 5L10 0H0Z" fill="#08221B" />
-                    </svg>
-                </button>
-            
-                <!-- Dropdown Items -->
-                <div id="services-menu"
-                    class="max-h-0 overflow-hidden flex flex-col items-center space-y-3 transition-all duration-900 ease-in-out">
-                    <a href="co-working-workspaces.html" class="text-gray-600 hover:text-green-600">Co-Working-Workspaces</a>
-                    <a href="party-area.html" class="text-gray-600 hover:text-green-600">Party-Area</a>
-                    <a href="bnb.html" class="text-gray-600 hover:text-green-600">BNB</a>
-                   </div>
-            </div>
-                 <a href="gallery.html"
-                class="text-gray-700 hover:text-green-600">GALLERY</a> 
-                <a href="contact.html"
-                class="bg-yellow-500 hover:bg-yellow-600 text-white px-5 py-2 rounded-full font-semibold shadow">
-                SCHEDULE A
-                CALL </a>
+            <a href="about.html" class="text-gray-700 hover:text-green-600">ABOUT US</a>
+            <a href="services.html" class="text-gray-700 hover:text-green-600">SERVICES</a>
+            <a href="gallery.html" class="text-gray-700 hover:text-green-600">GALLERY</a>
+            <a href="contact.html" class="bg-yellow-500 hover:bg-yellow-600 text-white px-5 py-2 rounded-full font-semibold shadow"> SCHEDULE A CALL </a>
         </div>
     </nav>
 
@@ -112,17 +62,7 @@
             mobileMenu.classList.toggle("hidden");
             mobileMenu.classList.toggle("flex");
         });
-
-        const servicesBtn = document.getElementById("services-btn");
-            const servicesMenu = document.getElementById("services-menu");
-            const arrow =document.getElementById("arrow-svg");
-
-            servicesBtn.addEventListener("click", () => {
-                servicesMenu.classList.toggle("max-h-0");
-                servicesMenu.classList.toggle("max-h-60"); // expand height
-                arrow.classList.toggle("rotate-180"); // rotate arrow down/up
-            });
-
+ 
     </script>
 
 </body>

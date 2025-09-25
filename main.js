@@ -79,29 +79,92 @@ async function loadPartial(id, url) {
 const servicesData = [
   {
     id: 1,
-    title: "Co-Working Spaces",
-    description:
-      "Modern and adaptive workspace solutions designed for collaboration and productivity.",
-    image: "images/Services/service1.webp",
-    link: "/Services/coworking",
+    title: "Day Pass",
+    description: "Pay-per-use passes on a daily basis.",
+    image: "images/Services/day-pass.webp",
+    link: "/services.html#day-pass",
   },
   {
     id: 2,
-    title: "Community & Networking",
-    description:
-      "Grow your connections with like-minded professionals through curated events.",
-    image: "images/Services/service2.webp",
-    link: "/Services/community",
+    title: "Dedicated Desk",
+    description: "A personal desk reserved exclusively for you.",
+    image: "images/Services/dedicated-desk.webp",
+    link: "/services.html#dedicated-desk",
   },
   {
     id: 3,
-    title: "Private Offices",
-    description:
-      "Flexible and secure private office spaces with premium amenities.",
-    image: "images/Services/service3.webp",
-    link: "/Services/private-offices",
+    title: "Managed / Serviced Office",
+    description: "Private, fully equipped office spaces.",
+    image: "images/Services/managed-office.webp", 
+    link: "/services.html#managed-office",
   },
-];
+  {
+    id: 4,
+    title: "Meeting Rooms",
+    description: "Reserved spaces designed for meetings.",
+    image: "images/Services/meeting-rooms.webp",
+    link: "/services.html#meeting-rooms",
+  },
+  {
+    id: 5,
+    title: "Community",
+    description: "The social aspect of co-working.",
+    image: "images/Services/community.webp",
+    link: "/services.html#community",
+  },
+  {
+    id: 6, 
+    title: "Shared Workspace",
+    description: "Office spaces shared by multiple individuals and companies.",
+    image: "images/Services/shared-workspace.webp",
+    link: "/services.html#shared-workspace",
+  },
+]; 
+const uspsData = [
+  {
+    id: 1,
+    title: "Centrally Located",
+    subtext: "Well Connected, Centrally Located Hub",
+    image: "images/USP/usp1.webp",
+    link: "/usp.html#centrally-located",
+  },
+  {
+    id: 2,
+    title: "Open to Curation",
+    subtext: "Your space, Your Design, Our Execution",
+    image: "images/USP/usp2.webp",
+    link: "/usp.html#open-to-curation",
+  },
+  {
+    id: 3,
+    title: "Experiential Integrated Workspace",
+    subtext: "Explore the Fully Integrated Workspace",
+    image: "images/USP/usp3.webp",
+    link: "/usp.html#experiential-integrated-workspace",
+  },
+  {
+    id: 4,
+    title: "Guest Retreat",
+    subtext: "One of its kind workspace with a BnB in Dehradun",
+    image: "images/USP/usp4.webp",
+    link: "/usp.html#guest-retreat",
+  },
+  {
+    id: 5,
+    title: "Tailored Dine In Options",
+    subtext:
+      "To cater for those hunger pangs, we have a full-fledged Cafeteria",
+    image: "images/USP/usp5.webp",
+    link: "/usp.html#tailored-dine-in-options",
+  },
+  {
+    id: 6,
+    title: "Rooftop Hobnobbing Space",
+    subtext: "Don’t look far for your Get-togethers",
+    image: "images/USP/usp6.webp",
+    link: "/usp.html#rooftop-hobnobbing-space",
+  },
+]; 
 const glimpsesData = [
   {
     id: 1,
@@ -347,6 +410,40 @@ const partyAreaData = [
 
 // === SLIDER CONFIGURATION ===
 const sliderConfigs = {
+  usp: {
+    containerSelector: ".usps-swiper",
+    containerId: "usps-container",
+    data: uspsData,
+    slideTemplate: (usps) => `
+      <div class="swiper-slide bg-[url(images/cardBg.webp)] bg-right bg-cover bg-no-repeat border border-gray-300 rounded-2xl overflow-hidden p-4 relative group card-animation">
+        <div class="p-4  h-28 text-left">
+         <span class="inline-block bg-yellow-500 text-white text-xs md:text-sm font-semibold px-3 py-2 rounded-full mb-3"> ${usps.title}</span>
+           <p class="text-gray-600 "> ${usps.subtext} </p>
+            </div>
+       <div class="relative h-full">
+            <img src="${usps.image}" alt="${usps.title}" class="w-full h-72 object-cover rounded-t-2xl group-hover:scale-105 transition duration-500" loading="lazy" onerror="this.src='https://img.freepik.com/free-vector/404-error-with-man-cones_24908-77788.jpg?t=st=1758540375~exp=1758543975~hmac=7ace41be601e9463efc9ea66207b7b8d903a0bcd0b3ea583fe508bb5e8ce3e82&w=1480'">
+          </div> 
+            <a href="${usps.link}" class=" absolute bottom-4 right-4 bg-yellow-500 cursor-pointer text-white w-10 h-10 flex items-center justify-center rounded-full shadow-md group-hover:scale-110 transition"> ➝ </a>
+        </div>
+      </div>
+    `,
+    options: {
+      slidesPerView: "auto",
+      spaceBetween: 24,
+      breakpoints: {
+        640: { slidesPerView: 1.5 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      },
+      grabCursor: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+    controls: { prev: "usp-prev", next: "usp-next" },
+  },
   services: {
     containerSelector: ".services-swiper",
     containerId: "slides-container",
@@ -357,12 +454,12 @@ const sliderConfigs = {
           <div class="relative">
             <img src="${service.image}" alt="${service.title}" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.freepik.com/free-vector/404-error-with-man-cones_24908-77788.jpg?t=st=1758540375~exp=1758543975~hmac=7ace41be601e9463efc9ea66207b7b8d903a0bcd0b3ea583fe508bb5e8ce3e82&w=1480'">
           </div>
-          <div data-link="${service.link}" class="arrow-icon cursor-pointer absolute top-0 right-0 bg-yellow-500 text-white w-10 h-10 flex items-center justify-center rounded-full shadow-md transition-transform duration-200 group-hover:text-black">
+          <a href="${service.link}" class="arrow-icon cursor-pointer absolute top-0 right-0 bg-yellow-500 text-white w-10 h-10 flex items-center justify-center rounded-full shadow-md transition-transform duration-200 group-hover:text-black">
             →
-          </div>
+          </a>
           <div class="absolute left-4 bottom-4 right-4">
             <div class="content-overlay bg-white/90 backdrop-blur-sm rounded-2xl p-4">
-              <h3 class="text-xl font-bold text-gray-900 mb-2 line-clamp-1">${service.title}</h3>
+              <h3 class="text-xl font-bold text-gray-900  line-clamp-1">${service.title}</h3>
               <p class="text-gray-700 text-sm leading-relaxed line-clamp-2">${service.description}</p>
             </div>
           </div>
@@ -380,7 +477,13 @@ const sliderConfigs = {
       speed: 600,
       grabCursor: true,
     },
-    controls: { prev: "custom-prev", next: "custom-next" },
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+    controls: { prev: "services-prev", next: "services-next" },
   },
   glimpses: {
     containerSelector: ".glimpses-swiper",
@@ -450,10 +553,10 @@ const sliderConfigs = {
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
       },
-     
+
       breakpoints: {
         640: { slidesPerView: 2 },
-        768: { slidesPerView: 3},
+        768: { slidesPerView: 3 },
         1280: { slidesPerView: 5 },
       },
       speed: 600,
