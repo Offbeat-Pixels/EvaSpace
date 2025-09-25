@@ -1,16 +1,26 @@
 @import "tailwindcss";
 
+/* Target ID instead of class */
+#scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+#scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
+}
+
+
 .clip-hero {
-  clip-path: path("M756.825 0.5H62.3115C28.3447 0.500263 0.771496 27.9108 0.50293 61.8174H0.524414V651.658C0.524414 685.795 28.2023 713.475 62.3359 713.476H495.145C529.278 713.475 556.956 685.795 556.956 651.658V433.209C556.956 398.52 585.082 370.392 619.768 370.392H756.825C790.959 370.391 818.637 342.711 818.637 308.574V62.3174C818.637 28.1808 790.959 0.500202 756.825 0.5Z");
+clip-path: path("M756.825 0.5H62.3115C28.3447 0.500263 0.771496 27.9108 0.50293 61.8174H0.524414V651.658C0.524414 685.795 28.2023 713.475 62.3359 713.476H495.145C529.278 713.475 556.956 685.795 556.956 651.658V433.209C556.956 398.52 585.082 370.392 619.768 370.392H756.825C790.959 370.391 818.637 342.711 818.637 308.574V62.3174C818.637 28.1808 790.959 0.500202 756.825 0.5Z");
 }
  /* Services Slider Styles */
-        .swiper-pagination-bullet {
-            background: #d1d5db;
-            opacity: 1;
-            width: 12px;
-            height: 12px;
-        } 
-        .swiper-pagination-bullet-active {
+            .swiper-pagination-bullet {
+                    background: #d1d5db;
+                    opacity: 1;
+                    width: 12px;
+                    height: 12px;
+            } 
+            .swiper-pagination-bullet-active {
             background: #374151;
             transform: scale(1.2);
         } 

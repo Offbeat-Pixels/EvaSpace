@@ -216,7 +216,7 @@ const testimonialsData = [
     role: "Cafe Owner",
     rating: 4,
     feedback:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod, nisl at convallis faucibus.",
+      "Eva Spaces provides a seamless work environment with everything I need to focus and grow my projects.",
     avatar: "https://i.pravatar.cc/60?img=1",
   },
   {
@@ -225,7 +225,7 @@ const testimonialsData = [
     role: "Digital Marketer",
     rating: 5,
     feedback:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod, nisl at convallis faucibus.",
+      "The flexible office setup and support from Eva Spaces have been invaluable for our early-stage business.",
     avatar: "https://i.pravatar.cc/60?img=2",
   },
   {
@@ -234,7 +234,7 @@ const testimonialsData = [
     role: "Freelancer",
     rating: 4,
     feedback:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod, nisl at convallis faucibus.",
+      "A great space for meetings, brainstorming, and networking with other professionals.",
     avatar: "https://i.pravatar.cc/60?img=3",
   },
   {
@@ -243,7 +243,7 @@ const testimonialsData = [
     role: "Freelancer",
     rating: 4,
     feedback:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod, nisl at convallis faucibus.",
+      "From the café to the workstations, every aspect of Eva Spaces makes working here enjoyable.",
     avatar: "https://i.pravatar.cc/60?img=3",
   },
   {
@@ -252,7 +252,7 @@ const testimonialsData = [
     role: "Freelancer",
     rating: 4,
     feedback:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod, nisl at convallis faucibus.",
+      "The environment is professional yet welcoming - perfect for managing my team and hosting clients.",
     avatar: "https://i.pravatar.cc/60?img=3",
   },
   {
@@ -261,7 +261,7 @@ const testimonialsData = [
     role: "Freelancer",
     rating: 4,
     feedback:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod, nisl at convallis faucibus.",
+      "Every corner of Eva Spaces is thoughtfully designed, making it an inspiring place to work.",
     avatar: "https://i.pravatar.cc/60?img=3",
   },
   {
@@ -270,7 +270,7 @@ const testimonialsData = [
     role: "Freelancer",
     rating: 4,
     feedback:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod, nisl at convallis faucibus.",
+      "From meeting rooms to breakout areas, everything is well-maintained and professional.",
     avatar: "https://i.pravatar.cc/60?img=3",
   },
 ];
@@ -525,7 +525,7 @@ const sliderConfigs = {
     data: testimonialsData,
     slideTemplate: (t) => `
     <div class="swiper-slide w-full h-full ">
-      <div class="bg-green-50 rounded-xl p-6 shadow hover:shadow-lg transition h-full flex flex-col">
+      <div class="bg-green-50 rounded-xl p-6   transition h-full flex flex-col">
         <div class="flex items-center mb-4">
           <img src="${t.avatar}" alt="${
       t.name
@@ -535,10 +535,10 @@ const sliderConfigs = {
             <p class="text-sm text-gray-500">${t.role}</p>
           </div>
         </div>
-        <div class="flex mb-3 text-yellow-500">
+        <div class="flex mb-2 text-yellow-500">
           ${"★".repeat(t.rating)}${"☆".repeat(5 - t.rating)}
         </div>
-        <p class="text-gray-600 text-sm leading-relaxed flex-1">
+        <p class="text-gray-600 text-sm leading-relaxed h-20">
           ${t.feedback}
         </p>
       </div>
@@ -590,6 +590,7 @@ const sliderConfigs = {
       },
       speed: 600,
       grabCursor: true,
+      pagination: false,
     },
   },
   coworking: {
