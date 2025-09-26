@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
 /* Target ID instead of class */
 #scrollbar-hide {
     -ms-overflow-style: none;  /* IE and Edge */

@@ -95,7 +95,7 @@ const servicesData = [
     id: 3,
     title: "Managed / Serviced Office",
     description: "Private, fully equipped office spaces.",
-    image: "images/Services/managed-office.webp", 
+    image: "images/Services/managed-office.webp",
     link: "/services.html#managed-office",
   },
   {
@@ -113,13 +113,13 @@ const servicesData = [
     link: "/services.html#community",
   },
   {
-    id: 6, 
+    id: 6,
     title: "Shared Workspace",
     description: "Office spaces shared by multiple individuals and companies.",
     image: "images/Services/shared-workspace.webp",
     link: "/services.html#shared-workspace",
   },
-]; 
+];
 const uspsData = [
   {
     id: 1,
@@ -164,51 +164,161 @@ const uspsData = [
     image: "images/USP/usp6.webp",
     link: "/usp.html#rooftop-hobnobbing-space",
   },
-]; 
+];
 const glimpsesData = [
+  // Workspace (6 images)
   {
     id: 1,
-    image:
-      "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=400&h=500&fit=crop",
+    image: "/images/Gallery/Gallery1-workspace.webp",
     alt: "Community workspace with people collaborating",
     category: "workspace",
   },
   {
     id: 2,
-    image:
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=500&fit=crop",
+    image: "/images/Gallery/Gallery2-workspace.webp",
     alt: "Modern bedroom workspace",
     category: "workspace",
   },
   {
     id: 3,
-    image:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=500&fit=crop",
+    image: "/images/Gallery/Gallery3-workspace.webp",
     alt: "Professional meeting room",
     category: "workspace",
   },
   {
     id: 4,
-    image:
-      "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=500&fit=crop",
+    image: "/images/Gallery/Gallery4-workspace.webp",
+    alt: "Modern bedroom workspace",
+    category: "workspace",
+  },
+  {
+    id: 5,
+    image: "/images/Gallery/Gallery5-workspace.webp",
+    alt: "Community workspace with people collaborating",
+    category: "workspace",
+  },
+  {
+    id: 6,
+    image: "/images/Gallery/Gallery6-workspace.webp",
+    alt: "Professional meeting room",
+    category: "workspace",
+  },
+
+  // Party (6 images)
+  {
+    id: 7,
+    image: "/images/Gallery/Gallery1-party-area.webp",
     alt: "Creative workspace with modern design",
     category: "party",
   },
   {
-    id: 5,
-    image:
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=400&h=500&fit=crop",
+    id: 8,
+    image: "/images/Gallery/Gallery2-party-area.webp",
+    alt: "Comfortable lounge area",
+    category: "party",
+  },
+  {
+    id: 9,
+    image: "/images/Gallery/Gallery3-party-area.webp",
+    alt: "Creative workspace with modern design",
+    category: "party",
+  },
+  {
+    id: 10,
+    image: "/images/Gallery/Gallery4-party-area.webp",
+    alt: "Comfortable lounge area",
+    category: "party",
+  },
+  {
+    id: 11,
+    image: "/images/Gallery/Gallery5-party-area.webp",
+    alt: "Creative workspace with modern design",
+    category: "party",
+  },
+  {
+    id: 12,
+    image: "/images/Gallery/Gallery6-party-area.webp",
+    alt: "Comfortable lounge area",
+    category: "party",
+  },
+
+  // BnB (6 images)
+  {
+    id: 13,
+    image: "/images/Gallery/Gallery1-bnb.webp",
     alt: "Comfortable lounge area",
     category: "bnb",
   },
   {
-    id: 6,
-    image:
-      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=400&h=500&fit=crop",
+    id: 14,
+    image: "/images/Gallery/Gallery2-bnb.webp",
+    alt: "Comfortable lounge area",
+    category: "bnb",
+  },
+  {
+    id: 15,
+    image: "/images/Gallery/Gallery3-bnb.webp",
+    alt: "Comfortable lounge area",
+    category: "bnb",
+  },
+  {
+    id: 16,
+    image: "/images/Gallery/Gallery4-bnb.webp",
+    alt: "Comfortable lounge area",
+    category: "bnb",
+  },
+  {
+    id: 17,
+    image: "/images/Gallery/Gallery5-bnb.webp",
+    alt: "Comfortable lounge area",
+    category: "bnb",
+  },
+  {
+    id: 18,
+    image: "/images/Gallery/Gallery6-bnb.webp",
+    alt: "Comfortable lounge area",
+    category: "bnb",
+  },
+
+  // Rooftop (6 images)
+  {
+    id: 19,
+    image: "/images/Gallery/Gallery1-rooftop.webp",
+    alt: "Event space setup",
+    category: "rooftop",
+  },
+  {
+    id: 20,
+    image: "/images/Gallery/Gallery2-rooftop.webp",
+    alt: "Event space setup",
+    category: "rooftop",
+  },
+  {
+    id: 21,
+    image: "/images/Gallery/Gallery3-rooftop.webp",
+    alt: "Event space setup",
+    category: "rooftop",
+  },
+  {
+    id: 22,
+    image: "/images/Gallery/Gallery4-rooftop.webp",
+    alt: "Event space setup",
+    category: "rooftop",
+  },
+  {
+    id: 23,
+    image: "/images/Gallery/Gallery5-rooftop.webp",
+    alt: "Event space setup",
+    category: "rooftop",
+  },
+  {
+    id: 24,
+    image: "/images/Gallery/Gallery6-rooftop.webp",
     alt: "Event space setup",
     category: "rooftop",
   },
 ];
+
 const testimonialsData = [
   {
     id: 1,

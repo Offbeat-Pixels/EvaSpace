@@ -9,6 +9,24 @@
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.1.14/bundled/lenis.min.js"></script>
+<script>
+    const lenis = new Lenis({
+        duration: 1.2,       // how long the easing takes
+        easing: (t) => 1 - Math.pow(1 - t, 3), // custom easing
+        smoothWheel: true,   // smooth mouse wheel
+        smoothTouch: true,   // smooth touch scroll
+    })
+
+    // RAF loop
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+</script>
+
 </head>
 
 <body>
@@ -58,21 +76,19 @@
     </div> -->
     </section>
 
-    <section id="services" class=" space-y-10 py-5 px-4">
+    <section id="services" class="px-4">
 
         <div class="max-w-96 h-fit mx-auto">
             <img src="images/About/roundedImg.webp" alt="Workspace" class="w-full h-full object-cover" />
 
         </div>
-        <div class="max-w-7xl mx-auto">
-            <div class="text-black font-normal max-w-5xl mx-auto space-y-3 text-center">
+        <div class="max-w-7xl mx-auto  py-10 ">
+            <div class="text-black font-normal max-w-5xl mx-auto space-y-3 text-start">
                 <h2 class="text-3xl md:text-5xl  text-gray-900 mb-4">
                     Creating Spaces Where Every Ability Thrives
                 </h2>
-                <div class=" max-w-3xl mx-auto space-y-3 font-semibold text-justify hyphens-auto text-sm md:text-base">
-
-
-                    <p>
+                <div class=" max-w-4xl mr-auto space-y-3 font-semibold text-justify hyphens-auto text-sm md:text-base"> 
+                     <p>
                         We graduated to creating office spaces from hosting homes on Airbnb. Hosting has been an
                         incredibly rewarding experience
                         for us. We carry the same ethos to our office space business. Whether you're welcoming guests
@@ -137,7 +153,7 @@
                 <img src="images/About/Our-Story.webp" alt="Our Story Image"
                     class="w-full h-full object-cover  rounded-lg" />
                 <!-- Button -->
-                <a href="#"
+                <a href="contact.html"
                     class="absolute top-4 right-3 md:top-2 xl:top-4 sm:right-0 bg-yellow-400 hover:bg-yellow-500 text-white font-semibold text-xs xl:text-sm px-[2%] py-[2%] rounded-full transition">
                     SCHEDULE A CALL
                 </a>
