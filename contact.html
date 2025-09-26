@@ -16,16 +16,16 @@
     <!-- Navbar -->
     <div id="navbar"></div>
     <section class="relative max-sm:bg-[url(images/Banner-mobile.webp)] bg-[url(images/BannerImg.webp)] bg-cover pt-32">
-        <main class="relative max-w-7xl mx-auto px-4 py-5 sm:px-6 lg:px-8 space-y-5 ">
+        <main class="relative max-w-7xl mx-auto px-2 py-5 sm:px-6 lg:px-8 space-y-5 ">
             <div
-                class="max-sm:bg-[url(images/contactBg.webp)] bg-[url(images/contactBg.svg)] bg-contain bg-no-repeat max-w-5xl mx-auto p-6 md:p-8 ">
+                class="max-sm:bg-[url(images/contactBg.webp)] bg-[url(images/contactBg.svg)] bg-contain bg-no-repeat max-w-5xl mx-auto p-2 md:p-8 ">
                 <!-- Inquiry Form -->
                 <div class="mx-auto w-fit  bg-white border border-gray-300 rounded-2xl px-4 py-1 -translate-y-7">
                     <h2 class="text-2xl text-center font-bold ">
                         The property you wish to inquire about
                     </h2>
                 </div>
-                <form action="#" method="POST" class="bg-transparent rounded-2xl space-y-8">
+                <form  class="bg-transparent rounded-2xl space-y-8">
                     <!-- Basic Information -->
                     <fieldset>
                         <legend class="text-lg font-semibold text-gray-800 mb-4">Basic Information</legend>
@@ -61,11 +61,11 @@
                     <!-- Content of Inquiry -->
                     <fieldset>
                         <legend class="text-lg font-semibold text-gray-800 mb-4">Content of Your Inquiry</legend>
-                        <div class="flex items-center justify-start gap-6">
+                        <div class="flex flex-wrap md:flex-row items-start md:items-center justify-start gap-6">
                             <div>
                                 <label class="block text-sm font-medium text-gray-900 mb-2">Your Request</label>
                                 <div
-                                    class="flex items-center justify-center gap-4 border border-gray-300  rounded-xl px-4 py-2">
+                                    class="flex-col md:flex-row  items-start md:items-center justify-center  gap-4 border border-gray-300  rounded-xl px-4 py-2">
                                     <label class="flex items-center gap-2">
                                         <input type="radio" name="request" value="tour"
                                             class="text-yellow-600 focus:ring-yellow-500">
@@ -83,11 +83,11 @@
                                 <label class="block text-sm font-medium text-gray-700 mb-2">How You Want To
                                     Lease</label>
                                 <div
-                                    class="flex items-center justify-center gap-4 border border-gray-300  rounded-xl px-4 py-2">
+                                    class="flex flex-col md:flex-row  items-start md:items-center justify-center gap-4 border border-gray-300  rounded-xl px-4 py-2">
                                     <label class="flex items-center gap-2">
                                         <input type="radio" name="lease" value="furnished"
                                             class="text-yellow-600 focus:ring-yellow-500">
-                                        Furnished Prefer
+                                        Furnished (Prefer)
                                     </label>
                                     <label class="flex items-center gap-2">
                                         <input type="radio" name="lease" value="unfurnished"
@@ -118,13 +118,13 @@
                     <!-- Newsletter -->
                     <fieldset>
                         <legend class="text-lg font-semibold text-gray-800 mb-2">Newsletter Subscription</legend>
-                        <div class="space-y-3">
+                        <div class="space-y-3 text-sm md:text-base">
                             <label class="flex items-center gap-2">
-                                <input type="checkbox" name="newsletter" class="text-yellow-600 focus:ring-yellow-500">
+                                <input type="checkbox" name="newsletter_email" value="on" class="text-yellow-600 focus:ring-yellow-500">
                                 I would like to receive the email newsletter.
                             </label>
                             <label class="flex items-center gap-2">
-                                <input type="checkbox" name="privacy" class="text-yellow-600 focus:ring-yellow-500"
+                                <input type="checkbox" name="newsletter_personal" value="on" class="text-yellow-600 focus:ring-yellow-500"
                                     required>
                                 I agree to the handling of personal information.
                             </label>
@@ -218,8 +218,7 @@
     <div id="footer"></div>
 
     <!-- JS Loader -->
-    <script defer type="module" src="main.js"></script>
-    <script defer type="module" src="contact.js"></script>
+    <script defer type="module" src="main.js"></script> 
 </body>
 
 </html>
