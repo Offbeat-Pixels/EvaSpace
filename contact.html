@@ -7,7 +7,7 @@
     <title>Evaspaces Party Area</title>
 
     <!-- Use compiled Tailwind (output.css) -->
-    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="/dist/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 </head>
@@ -58,7 +58,8 @@
                     </fieldset>
 
                     <!-- Content of Inquiry -->
-                    <fieldset>  <legend class="text-lg font-semibold text-gray-800 mb-4">Content of Your Inquiry</legend>
+                    <fieldset>
+                        <legend class="text-lg font-semibold text-gray-800 mb-4">Content of Your Inquiry</legend>
                         <div class="flex flex-wrap md:flex-row items-start md:items-center justify-start gap-6">
                             <div>
                                 <label class="block text-sm font-medium text-gray-900 mb-2">Your Request</label>
@@ -80,7 +81,8 @@
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">How You Want To
                                     Lease</label>
-                                <div class="flex flex-col md:flex-row  items-start md:items-center justify-center gap-4 border border-gray-300  rounded-xl px-4 py-2">
+                                <div
+                                    class="flex flex-col md:flex-row  items-start md:items-center justify-center gap-4 border border-gray-300  rounded-xl px-4 py-2">
                                     <label class="flex items-center gap-2">
                                         <input type="radio" name="lease" value="furnished"
                                             class="text-yellow-600 focus:ring-yellow-500">
@@ -103,7 +105,7 @@
                                 <label for="area" class="block text-sm font-medium text-gray-700 ">Desired Area</label>
                                 <select id="area" name="area"
                                     class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2 focus:ring-yellow-500 focus:border-yellow-500">
-                                    <option value="">Please Select</option> 
+                                    <option value="">Please Select</option>
                                     <option>Very Small Team (1–5 People)</option>
                                     <option>Small Group (6–15 People)</option>
                                     <option>Medium (16–30 People)</option>
@@ -179,8 +181,7 @@
                             class="hover:underline">info@evaspaces.com</a>
                     </p>
                     <p class="flex items-center gap-2 mb-2">
-                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_98_5293)">
                                 <path
                                     d="M0 12.1738C0 11.7246 0 11.2754 0 10.8262C0.0140381 10.747 0.0303223 10.6684 0.0409912 10.5886C0.095459 10.1737 0.128027 9.75479 0.205518 9.34431C0.640698 7.05386 1.68345 5.07449 3.32253 3.42024C5.0408 1.68513 7.10608 0.592969 9.51782 0.17688C9.95132 0.102197 10.3899 0.0578369 10.8262 0C11.2754 0 11.7246 0 12.1738 0C12.4771 0.036499 12.7814 0.0668213 13.0841 0.109497C15.3515 0.430127 17.3567 1.3353 19.0727 2.85085C21.0942 4.63594 22.3582 6.85732 22.8237 9.52063C22.8989 9.953 22.9422 10.3904 23.0006 10.8256V12.1733C22.9865 12.2524 22.9702 12.3311 22.9596 12.4108C22.9051 12.8258 22.8725 13.2447 22.795 13.6551C22.3599 15.9456 21.3171 17.925 19.678 19.5792C17.9598 21.3143 15.895 22.4065 13.4827 22.822C13.0492 22.8967 12.6107 22.941 12.1744 22.9989H10.8267C10.5235 22.9624 10.2192 22.9321 9.9165 22.8894C7.64907 22.5688 5.64387 21.6636 3.92786 20.148C1.90637 18.3629 0.642383 16.1416 0.17688 13.4782C0.101074 13.0464 0.0578369 12.609 0 12.1738ZM11.5101 2.25452C6.46201 2.2781 2.31179 6.30422 2.25676 11.4523C2.20286 16.5161 6.34185 20.7067 11.4573 20.7399C16.5195 20.7724 20.7152 16.6812 20.7404 11.5382C20.7657 6.47717 16.6739 2.28933 11.5101 2.25508V2.25452Z"
