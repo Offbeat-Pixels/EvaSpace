@@ -14,10 +14,9 @@
 <body>
     <!-- Navbar -->
     <div id="navbar"></div>
-
     <!-- Hero -->
     <section
-        class="relative max-sm:bg-[url(images/Banner-mobile.webp)] bg-[url(images/BannerImg.webp)] bg-cover overflow-clip">
+        class="relative  bg-[url(images/Banner-mobile.webp)] lg:bg-[url(images/BannerImg.webp)] bg-cover overflow-clip">
         <div
             class="max-w-6xl 2xl:max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between h-[45rem] lg:h-[55rem] px-2">
             <div
@@ -25,12 +24,12 @@
                 <div class="absolute inset-0 -z-[1]">
                     <img src="images/HeroImg-Mobile.webp" alt="" srcset=""
                         class="w-full h-full object-center block lg:hidden ">
-                    <img src="images/HeroImg.webp" alt="" srcset="" class="w-full h-full object- hidden lg:block">
+                    <img src="images/HeroImg.webp" alt="" srcset="" class="w-full h-full object-center hidden lg:block">
                 </div>
                 <div
                     class="w-full h-fit max-lg:max-w-3xl max-w-2xl text-gray-800  p-2 lg:p-4 flex flex-col justify-end items-start">
                     <div class="text-sm lg:text-lg lg:mb-6 w-full max-w- xs lg:w-md xl:w-xl pt-2  lg:pt-10">
-                        <div class=" flex items-center justify-start gap-2 ">
+                        <div class=" flex items-center justify-start gap-2 lg:mb-6">
                             <div class="size-3 bg-yellow-300 "></div>
                             <span class="text-sm md:text-xl font-semibold w-fit text-nowrap">Welcome to
                                 Evaspaces</span>
@@ -38,21 +37,33 @@
                         </div>
                         <div class="w-full">
                             <h1 class="text-2xl lg:text-4xl 2xl:text-5xl font-bold lg:mb-2">A Boutique Experiential</h1>
-                            <h2 class="text-2xl lg:text-4xl 2xl:text-5xl lg:mb-4">Co-Working Destination!</h2>
-                            <p class="text-[12px] lg:text-base mb-4 lg:mb-6 max-w-[100%] ">
+                            <h2 class="text-2xl lg:text-4xl 2xl:text-5xl font-bold lg:mb-4">Co-Working Destination!</h2>
+                            <p class="text-[12px] lg:text-base mb-4 lg:mb-6 max-w-[90%] ">
                                 Evaspaces is a brand synonymous with quality, par excellence. The brand has been in
                                 operation for over 10+ years and has
                                 serviced several happy customers.</p>
-                            <a href="/contact.html"
-                                class="bg-[#FAAD00] text-white px-2 lg:px-3 py-1 lg:py-2 flex  items-center justify-between gap-1 w-fit rounded-full font-semibold uppercase text-sm hover:bg-[#000000] transition-colors duration-500">
-                                <span class="">LET’S CONNECT</span>
-                                <svg width="20" height="20" viewBox="0 0 29 29" fill="none">
-                                    <circle cx="14.5" cy="14.5" r="14.5" fill="white" />
-                                    <path
-                                        d="M22.7071 15.7071C23.0976 15.3166 23.0976 14.6834 22.7071 14.2929L16.3431 7.92893C15.9526 7.53841 15.3195 7.53841 14.9289 7.92893C14.5384 8.31946 14.5384 8.95262 14.9289 9.34315L20.5858 15L14.9289 20.6569C14.5384 21.0474 14.5384 21.6805 14.9289 22.0711C15.3195 22.4616 15.9526 22.4616 16.3431 22.0711L22.7071 15.7071ZM6 15V16H22V15V14H6V15Z"
-                                        fill="#FAAD00" />
-                                </svg>
-                            </a>
+                            <div class="flex flex-row md:items-center justify-start gap-4">
+                                <a href="/contact.html"
+                                    class="bg-[#FAAD00] text-white px-2 lg:px-3 py-1 lg:py-2 flex  items-center justify-between gap-1 w-fit rounded-full font-semibold uppercase text-[10px] md:text-sm hover:bg-[#000000] transition-colors duration-500">
+                                    <span class="">Connect To Know More</span>
+                                    <svg width="20" height="20" viewBox="0 0 29 29" fill="none">
+                                        <circle cx="14.5" cy="14.5" r="14.5" fill="white" />
+                                        <path
+                                            d="M22.7071 15.7071C23.0976 15.3166 23.0976 14.6834 22.7071 14.2929L16.3431 7.92893C15.9526 7.53841 15.3195 7.53841 14.9289 7.92893C14.5384 8.31946 14.5384 8.95262 14.9289 9.34315L20.5858 15L14.9289 20.6569C14.5384 21.0474 14.5384 21.6805 14.9289 22.0711C15.3195 22.4616 15.9526 22.4616 16.3431 22.0711L22.7071 15.7071ZM6 15V16H22V15V14H6V15Z"
+                                            fill="#FAAD00" />
+                                    </svg>
+                                </a>
+                                <div class="flex md:items-center justify-start ">
+                                    <svg width="29" height="29" viewBox="0 0 29 29" fill="none"
+                                        class="size-6 md:size-8">
+                                        <path
+                                            d="M5.83222 12.5506C8.15222 17.11 11.89 20.8317 16.4494 23.1678L19.9939 19.6233C20.4289 19.1883 21.0733 19.0433 21.6372 19.2367C23.4417 19.8328 25.3911 20.155 27.3889 20.155C28.275 20.155 29 20.88 29 21.7661V27.3889C29 28.275 28.275 29 27.3889 29C12.2606 29 0 16.7394 0 1.61111C0 0.725 0.725 0 1.61111 0H7.25C8.13611 0 8.86111 0.725 8.86111 1.61111C8.86111 3.625 9.18333 5.55833 9.77944 7.36278C9.95667 7.92667 9.82778 8.555 9.37667 9.00611L5.83222 12.5506Z"
+                                            fill="black" />
+                                    </svg>
+                                    <p class="font-semibold">+919412075850</p>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class=" ml-auto mt-6 h-fit gap-start w-[50%] block lg:hidden bg-gray-100 rounded-4xl  py-4">
@@ -73,7 +84,7 @@
                     </div>
                 </div>
                 <div
-                    class="w-[40%] h-fit lg:w-full lg:max-w-[60rem] 2xl:max-w-5xl px-2  flex flex-row  justify-between items-center ">
+                    class="w-[40%] h-fit lg:w-full lg:max-w-[60rem] 2xl:max-w-[68rem] px-2  flex flex-row  justify-between items-center ">
                     <div
                         class=" hidden lg:flex flex-col sm:flex-row items-start   h-fit gap-1  bg-gray-100 rounded-4xl px-2 py-2">
                         <!-- Avatars -->
@@ -87,19 +98,19 @@
                                 more
                             </div>
                         </div>
-                        <div class="flex flex-col -space-y-2">
+                        <div class="flex flex-col -space-y-2 overflow-clip">
                             <span class="font-bold text-2xl">100+</span>
-                            <span>enjoy working with us</span>
+                            <span class="text-sm">Enjoy working with us</span>
                         </div>
                     </div>
                     <div
-                        class="max-w-fit mr-auto md:ml-auto h-24 sm:h-[80%] bg-[url(images/BannerImg.webp)] bg-center bg-cover bg-no-repeat md::mx-auto p-1 sm:p-2 rounded-3xl shadow-md flex gap-2 sm:gap-4 flex-row items-stretch">
+                        class="max-w-fit mr-auto md:ml-auto h-24 sm:h-[80%] bg-[url(images/BannerImg.webp)] bg-center bg-cover bg-no-repeat md:mx-auto p-1 sm:p-2 rounded-3xl shadow-md flex gap-2 sm:gap-4 flex-row items-stretch">
                         <div class="w-40 sm:w-52 h-full">
-                            <img src="images/bnb.webp" alt="Cozy BNB room at EVA Spaces with bed and decor"
+                            <img src="images/workspace-banner.webp" alt="Cozy BNB room at EVA Spaces with bed and decor"
                                 loading="lazy" class="w-full h-full object-cover rounded-2xl" />
                         </div>
                         <div class="w-full max-w-40 md:max-w-48 flex flex-col justify-center sm:p-2">
-                            <h3 class="text-sm lg:text-xl font-bold text-gray-900 lg:mb-1">BNB</h3>
+                            <h3 class="text-sm lg:text-xl font-bold text-gray-900 lg:mb-1">Workspace</h3>
                             <p class="text-gray-700 text-[10px] lg:text-sm leading-relaxed sm:mb-2">
                                 Every detail at <a href="about.html">EVA Spaces</a> is crafted to make work feel natural
                                 and
@@ -157,7 +168,7 @@
 
     <!-- Services -->
     <section id="services" class="bg-[url(images/Services/BG.webp)] bg-center bg-cover bg-no-repeat ">
-        <main class="max-w-7xl mx-auto px-2 md:px-4 py-8 md:py-16 space-y-5">
+        <main class="max-w-7xl mx-auto px-4 md:px-4 py-8 md:py-16 space-y-5">
             <!-- Header -->
             <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-2 md:mb-4 ">
                 <div class="text-left ">
@@ -167,7 +178,7 @@
                             Our Services
                         </span>
                     </h2>
-                    <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mb-4">
+                    <p class="md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mb-4">
                         Inclusive By Design. Our Inclusive & Adaptive Workspaces Foster Equality,
                         Independence, And Innovation.
                     </p>
@@ -196,17 +207,17 @@
     </section>
 
     <section class="bg-[url(images/usp/BG.webp)] bg-center bg-cover bg-no-repeat py-5 border-y border-gray-200">
-        <main class="max-w-7xl mx-auto ">
+        <main class="max-w-7xl mx-auto overflow-clip">
             <!-- Header -->
             <div class="text-center px-2 md:px-4 py-8 md:py-16">
-                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 relative inline-block ">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 relative inline-block  ">
                     <span
                         class="before:content-[''] before:block before:absolute before:-left-16 before:top-1/2 before:w-12 before:h-[1px] before:bg-gray-400 after:content-[''] after:block after:absolute after:-right-16 after:top-1/2 after:w-12 after:h-[1px] after:bg-gray-400">
-                        Our Glimpses
+                        Glimpses Of The Property
                     </span>
                 </h2>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                    Take a virtual tour of Eva Spaces — from workstations and meeting rooms to lounges, café, and
+                    Take a virtual tour of Eva Spaces - from workstations and meeting rooms to lounges, café, and
                     collaborative zones
                 </p>
             </div>

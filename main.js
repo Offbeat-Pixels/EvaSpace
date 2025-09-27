@@ -126,43 +126,43 @@ const uspsData = [
     title: "Centrally Located",
     subtext: "Well Connected, Centrally Located Hub",
     image: "images/USP/usp1.webp",
-    link: "/usp.html#centrally-located",
+    link: "/what-sets-us-apart.html#centrally-located",
   },
   {
     id: 2,
     title: "Open to Curation",
-    subtext: "Your space, Your Design, Our Execution",
+    subtext: "Your Space, Your Design, Our Execution",
     image: "images/USP/usp2.webp",
-    link: "/usp.html#open-to-curation",
+    link: "/what-sets-us-apart.html#open-to-curation",
   },
   {
     id: 3,
     title: "Experiential Integrated Workspace",
     subtext: "Explore the Fully Integrated Workspace",
     image: "images/USP/usp3.webp",
-    link: "/usp.html#experiential-integrated-workspace",
+    link: "/what-sets-us-apart.html#experiential-integrated-workspace",
   },
   {
     id: 4,
     title: "Guest Retreat",
     subtext: "One of its kind workspace with a BnB in Dehradun",
     image: "images/USP/usp4.webp",
-    link: "/usp.html#guest-retreat",
+    link: "/what-sets-us-apart.html#guest-retreat",
   },
   {
     id: 5,
-    title: "Tailored Dine In Options",
+    title: "Tailored Dine-In Options",
     subtext:
       "To cater for those hunger pangs, we have a full-fledged Cafeteria",
     image: "images/USP/usp5.webp",
-    link: "/usp.html#tailored-dine-in-options",
+    link: "/what-sets-us-apart.html#tailored-dine-in-options",
   },
   {
     id: 6,
     title: "Rooftop Hobnobbing Space",
     subtext: "Don’t look far for your Get-togethers",
     image: "images/USP/usp6.webp",
-    link: "/usp.html#rooftop-hobnobbing-space",
+    link: "/what-sets-us-apart.html#rooftop-hobnobbing-space",
   },
 ];
 const glimpsesData = [
@@ -322,66 +322,57 @@ const glimpsesData = [
 const testimonialsData = [
   {
     id: 1,
-    name: "Jhon Doe",
-    role: "Cafe Owner",
-    rating: 4,
-    feedback:
-      "Eva Spaces provides a seamless work environment with everything I need to focus and grow my projects.",
-    avatar: "https://i.pravatar.cc/60?img=1",
-  },
-  {
-    id: 2,
-    name: "Jhon Doe",
-    role: "Digital Marketer",
+    name: "Macula Consultants ",
     rating: 5,
     feedback:
-      "The flexible office setup and support from Eva Spaces have been invaluable for our early-stage business.",
-    avatar: "https://i.pravatar.cc/60?img=2",
+      "Eva Spaces provides a seamless work environment with everything I need to focus and grow my projects.",
+    avatar: "images/Clients/Macula.webp",
   },
+
   {
     id: 3,
-    name: "Jhon Doe",
-    role: "Freelancer",
+    name: "Offbeat Pixels ",
     rating: 4,
     feedback:
       "A great space for meetings, brainstorming, and networking with other professionals.",
-    avatar: "https://i.pravatar.cc/60?img=3",
+    avatar:
+      "images/Clients/OP.webp",
   },
   {
     id: 5,
-    name: "Jhon Doe",
-    role: "Freelancer",
+    name: "Ayush Chouhan ",
     rating: 4,
     feedback:
       "From the café to the workstations, every aspect of Eva Spaces makes working here enjoyable.",
-    avatar: "https://i.pravatar.cc/60?img=3",
+    avatar:
+      "https://imgs.search.brave.com/5k3wN1_sfVQBGKCcNtEKgYA18OAG0A6UFyS2TYqbnmA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNTkx/NDA3MTExL3Bob3Rv/L2luZGlhbi1idXNp/bmVzc21hbi1zdGFu/ZGluZy1vbi1vZmZp/Y2Utc3RlcHMuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPTR1/V0hiZGExZVZtVUFi/M2ZNTmxyX3BuMjVo/Q1ZHc1FjT2pXZVo3/RENFbFU9",
   },
   {
     id: 6,
-    name: "Jhon Doe",
-    role: "Freelancer",
-    rating: 4,
+    name: "Rohit Panwar",
+    rating: 5,
     feedback:
       "The environment is professional yet welcoming - perfect for managing my team and hosting clients.",
-    avatar: "https://i.pravatar.cc/60?img=3",
+    avatar:
+      "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 7,
-    name: "Jhon Doe",
-    role: "Freelancer",
+    name: "Aditya Raj",
     rating: 4,
     feedback:
       "Every corner of Eva Spaces is thoughtfully designed, making it an inspiring place to work.",
-    avatar: "https://i.pravatar.cc/60?img=3",
+    avatar:
+      "https://media.istockphoto.com/id/1216426542/photo/portrait-of-happy-man-at-white-background-stock-photo.jpg?b=1&s=612x612&w=0&k=20&c=dE3NlvctnoSlmxBHwh5zFXeKZJXe1wnCSw9apjgtY_o=",
   },
   {
     id: 8,
-    name: "Jhon Doe",
-    role: "Freelancer",
-    rating: 4,
+    name: "Mohit Kumar",
+    rating: 5,
     feedback:
       "From meeting rooms to breakout areas, everything is well-maintained and professional.",
-    avatar: "https://i.pravatar.cc/60?img=3",
+    avatar:
+      "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg",
   },
 ];
 const clientsData = [
@@ -540,6 +531,12 @@ const sliderConfigs = {
     options: {
       slidesPerView: "auto",
       spaceBetween: 24,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
       breakpoints: {
         640: { slidesPerView: 1.5 },
         768: { slidesPerView: 2 },
@@ -579,6 +576,12 @@ const sliderConfigs = {
     options: {
       slidesPerView: "auto",
       spaceBetween: 24,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
       breakpoints: {
         640: { slidesPerView: 1.5 },
         768: { slidesPerView: 2 },
@@ -639,10 +642,9 @@ const sliderConfigs = {
         <div class="flex items-center mb-4">
           <img src="${t.avatar}" alt="${
       t.name
-    }" class="w-12 h-12 rounded-full mr-3" loading="lazy" />
+    }" class="w-12 h-12 object-cover border border-white shadow-md rounded-full mr-3" loading="lazy" />
           <div>
-            <h3 class="text-lg font-semibold text-gray-800">${t.name}</h3>
-            <p class="text-sm text-gray-500">${t.role}</p>
+            <h3 class="text-lg font-semibold text-gray-800">${t.name}</h3> 
           </div>
         </div>
         <div class="flex mb-2 text-yellow-500">
@@ -841,181 +843,181 @@ function lazyInitSwiper(config, key) {
 }
 
 function contactFormSubmition() {
-   const form =
-     document.querySelector("form") ||
-     document.querySelector("form[action='#']");
+  const form =
+    document.querySelector("form") ||
+    document.querySelector("form[action='#']");
 
-   if (!form) return;
-   if (form.hasAttribute("data-handler-attached")) return;
-   form.setAttribute("data-handler-attached", "true");
+  if (!form) return;
+  if (form.hasAttribute("data-handler-attached")) return;
+  form.setAttribute("data-handler-attached", "true");
 
-   const responseMessage = document.createElement("div");
-   responseMessage.className = "form-response mt-4";
-   form.appendChild(responseMessage);
+  const responseMessage = document.createElement("div");
+  responseMessage.className = "form-response mt-4";
+  form.appendChild(responseMessage);
 
-   let isSubmitting = false;
+  let isSubmitting = false;
 
-   form.addEventListener("submit", async function (event) {
-     event.preventDefault();
-     if (isSubmitting) return;
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+    if (isSubmitting) return;
 
-     const submitButton = form.querySelector('button[type="submit"]');
-     isSubmitting = true;
-     responseMessage.textContent = "";
-     responseMessage.className = "form-response mt-4";
+    const submitButton = form.querySelector('button[type="submit"]');
+    isSubmitting = true;
+    responseMessage.textContent = "";
+    responseMessage.className = "form-response mt-4";
 
-     if (submitButton) {
-       submitButton.innerHTML = `
+    if (submitButton) {
+      submitButton.innerHTML = `
         <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white inline" fill="none" viewBox="0 0 24 24">
           <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
           <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
         </svg>
         Submitting...
       `;
-       submitButton.disabled = true;
-     }
+      submitButton.disabled = true;
+    }
 
-     // Get form data matching your HTML form structure
-     const formData = new FormData(form);
-     const data = {
-       "Company Name": formData.get("company") || "",
-       Name: formData.get("name") || "",
-       Email: formData.get("email") || "",
-       Phone: formData.get("phone") || "",
-       Request: formData.get("request") || "", // Tour / Info
-       Lease: formData.get("lease") || "", // Furnished / Unfurnished
-       "Desired Area": formData.get("area") || "", // Dehradun / Delhi / Other
-       "Newsletter-Email":
-         formData.get("newsletter_email") === "on" ? "Yes" : "No",
-       "Newsletter-Personal":
-         formData.get("newsletter_personal") === "on" ? "Yes" : "No",
-       SubmittedAt: new Date().toISOString(),
-     };
+    // Get form data matching your HTML form structure
+    const formData = new FormData(form);
+    const data = {
+      "Company Name": formData.get("company") || "",
+      Name: formData.get("name") || "",
+      Email: formData.get("email") || "",
+      Phone: formData.get("phone") || "",
+      Request: formData.get("request") || "", // Tour / Info
+      Lease: formData.get("lease") || "", // Furnished / Unfurnished
+      "Desired Area": formData.get("area") || "", // Dehradun / Delhi / Other
+      "Newsletter-Email":
+        formData.get("newsletter_email") === "on" ? "Yes" : "No",
+      "Newsletter-Personal":
+        formData.get("newsletter_personal") === "on" ? "Yes" : "No",
+      SubmittedAt: new Date().toISOString(),
+    };
 
-     try {
-       const webAppUrl = "https://evaspace.compassddun.workers.dev/";
+    try {
+      const webAppUrl = "https://evaspace.compassddun.workers.dev/";
 
-       const response = await fetch(webAppUrl, {
-         method: "POST",
-         headers: {
-           "Content-Type": "application/json",
-         },
-         body: JSON.stringify(data),
-       });
+      const response = await fetch(webAppUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-       const text = await response.text();
+      const text = await response.text();
 
-       if (response.ok && text.includes("success")) {
-         form.reset();
-         responseMessage.innerHTML = `
+      if (response.ok && text.includes("success")) {
+        form.reset();
+        responseMessage.innerHTML = `
           <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
             <strong>Success!</strong> Your inquiry has been submitted successfully. We'll contact you soon.
           </div>
         `;
 
-         // Scroll to message
-         responseMessage.scrollIntoView({
-           behavior: "smooth",
-           block: "center",
-         });
-       } else {
-         throw new Error("Server error");
-       }
-     } catch (error) {
-       console.error("Error:", error);
-       responseMessage.innerHTML = `
+        // Scroll to message
+        responseMessage.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      } else {
+        throw new Error("Server error");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      responseMessage.innerHTML = `
         <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
           <strong>Error!</strong> There was a problem submitting your inquiry. Please try again.
         </div>
       `;
-     } finally {
-       if (submitButton) {
-         submitButton.disabled = false;
-         submitButton.textContent = "Make an Inquiry";
-       }
-       isSubmitting = false;
-     }
-   });
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = "Make an Inquiry";
+      }
+      isSubmitting = false;
+    }
+  });
 
-   // Enhanced validation for your specific fields
-   const validateForm = () => {
-     let isValid = true;
+  // Enhanced validation for your specific fields
+  const validateForm = () => {
+    let isValid = true;
 
-     // Required fields validation
-     const requiredFields = [
-       { name: "company", label: "Company Name" },
-       { name: "name", label: "Your Name" },
-       { name: "phone", label: "Phone Number" },
-       { name: "email", label: "Email Address" },
-       { name: "privacy", label: "Privacy Agreement", type: "checkbox" },
-     ];
+    // Required fields validation
+    const requiredFields = [
+      { name: "company", label: "Company Name" },
+      { name: "name", label: "Your Name" },
+      { name: "phone", label: "Phone Number" },
+      { name: "email", label: "Email Address" },
+      { name: "privacy", label: "Privacy Agreement", type: "checkbox" },
+    ];
 
-     requiredFields.forEach((field) => {
-       const input = form.querySelector(`[name="${field.name}"]`);
-       if (!input) return;
+    requiredFields.forEach((field) => {
+      const input = form.querySelector(`[name="${field.name}"]`);
+      if (!input) return;
 
-       let hasError = false;
+      let hasError = false;
 
-       if (field.type === "checkbox") {
-         hasError = !input.checked;
-       } else {
-         hasError = !input.value.trim();
-       }
+      if (field.type === "checkbox") {
+        hasError = !input.checked;
+      } else {
+        hasError = !input.value.trim();
+      }
 
-       if (hasError) {
-         input.classList.add("border-red-500");
-         isValid = false;
-       } else {
-         input.classList.remove("border-red-500");
-       }
-     });
+      if (hasError) {
+        input.classList.add("border-red-500");
+        isValid = false;
+      } else {
+        input.classList.remove("border-red-500");
+      }
+    });
 
-     // Email validation
-     const emailInput = form.querySelector('[name="email"]');
-     if (emailInput && emailInput.value) {
-       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-       if (!emailRegex.test(emailInput.value)) {
-         emailInput.classList.add("border-red-500");
-         isValid = false;
-       }
-     }
+    // Email validation
+    const emailInput = form.querySelector('[name="email"]');
+    if (emailInput && emailInput.value) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(emailInput.value)) {
+        emailInput.classList.add("border-red-500");
+        isValid = false;
+      }
+    }
 
-     // Phone validation
-     const phoneInput = form.querySelector('[name="phone"]');
-     if (phoneInput && phoneInput.value) {
-       const phoneRegex = /^[\+]?[\d\s\-\(\)]{10,}$/;
-       if (!phoneRegex.test(phoneInput.value)) {
-         phoneInput.classList.add("border-red-500");
-         isValid = false;
-       }
-     }
+    // Phone validation
+    const phoneInput = form.querySelector('[name="phone"]');
+    if (phoneInput && phoneInput.value) {
+      const phoneRegex = /^[\+]?[\d\s\-\(\)]{10,}$/;
+      if (!phoneRegex.test(phoneInput.value)) {
+        phoneInput.classList.add("border-red-500");
+        isValid = false;
+      }
+    }
 
-     return isValid;
-   };
+    return isValid;
+  };
 
-   // Real-time validation
-   form.querySelectorAll("input, select, textarea").forEach((input) => {
-     input.addEventListener("blur", validateForm);
-     input.addEventListener("input", function () {
-       if (this.classList.contains("border-red-500")) {
-         validateForm();
-       }
-     });
-   });
+  // Real-time validation
+  form.querySelectorAll("input, select, textarea").forEach((input) => {
+    input.addEventListener("blur", validateForm);
+    input.addEventListener("input", function () {
+      if (this.classList.contains("border-red-500")) {
+        validateForm();
+      }
+    });
+  });
 
-   // Validate on submit
-   form.addEventListener("submit", function (e) {
-     if (!validateForm()) {
-       e.preventDefault();
-       responseMessage.innerHTML = `
+  // Validate on submit
+  form.addEventListener("submit", function (e) {
+    if (!validateForm()) {
+      e.preventDefault();
+      responseMessage.innerHTML = `
         <div class="bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded">
           Please fill in all required fields correctly.
         </div>
       `;
-       responseMessage.scrollIntoView({ behavior: "smooth", block: "center" });
-     }
-   });
- } 
+      responseMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  });
+}
 
 // Gallery-specific functionality
 let glimpsesSwiper;
@@ -1148,7 +1150,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       // Initialize gallery tabs
       initializeGalleryTabs();
-contactFormSubmition()
+      contactFormSubmition();
       // Service card click handler
       document.addEventListener("click", (e) => {
         const arrow = e.target.closest(".arrow-icon");

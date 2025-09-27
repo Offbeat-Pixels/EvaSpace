@@ -22,47 +22,78 @@
 
             <!-- Desktop Menu -->
             <ul
-                class="hidden lg:flex items-center space-x-6 text-sm font-medium bg-transparent rounded-full   px-6 py-4 shadow border border-gray-200">
-                <li><a href="/index.html" class="text-green-600">HOME</a></li>
-                <li><a href="/about.html" class="text-gray-700 hover:text-green-600">ABOUT US</a></li>
-                <li><a href="/usp.html" class="text-gray-700 hover:text-green-600">USP</a></li>
-                <li><a href="/services.html" class="text-gray-700 hover:text-green-600">SERVICES</a></li>
-                <li><a href="/gallery.html" class="text-gray-700 hover:text-green-600">GALLERY</a></li>
+                class="hidden lg:flex items-center space-x-6 text-sm font-medium bg-transparent rounded-full uppercase  px-6 py-4 shadow border border-gray-200">
+                <li><a href="/index.html" class="nav-link text-gray-700 hover:text-green-600">HOME</a></li>
+                <li><a href="/about.html" class="nav-link text-gray-700 hover:text-green-600">ABOUT US</a></li>
+                <li><a href="/what-sets-us-apart.html" class="nav-link text-gray-700  hover:text-green-600">What Sets Us
+                        Apart</a></li>
+                <li><a href="/services.html" class="nav-link text-gray-700 hover:text-green-600">SERVICES</a></li>
+                <li><a href="/gallery.html" class="nav-link text-gray-700 hover:text-green-600">GALLERY</a></li>
                 <li> <a href="/contact.html"
                         class="bg-yellow-500 hover:bg-yellow-600 text-white px-5 py-2 rounded-full font-semibold shadow">
                         SCHEDULE A CALL </a> </li>
             </ul>
 
             <!-- Mobile Menu Button -->
+            <!-- Mobile Menu Button -->
             <button id="menu-btn" class="lg:hidden focus:outline-none" aria-label="Toggle Menu">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24"
+                <!-- Hamburger Icon -->
+                <svg id="hamburger" class="h-6 w-6 text-gray-700 block" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
+
+                <!-- X Icon -->
+                <svg id="close-icon" class="h-6 w-6 text-gray-700 hidden" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
             </button>
+
         </div>
 
         <!-- Mobile Menu -->
         <div id="mobile-menu"
-            class="hidden bg-white rounded-2xl transform-fill flex-col items-start space-y-4 p-10 transition-all duration-300 ease-in-out">
-            <a href="/" class="text-green-600">HOME</a>
-            <a href="usp.html" class="text-gray-700 hover:text-green-600">USP</a>
-            <a href="about.html" class="text-gray-700 hover:text-green-600">ABOUT US</a>
-            <a href="services.html" class="text-gray-700 hover:text-green-600">SERVICES</a>
-            <a href="gallery.html" class="text-gray-700 hover:text-green-600">GALLERY</a>
-            <a href="contact.html" class="bg-yellow-500 hover:bg-yellow-600 text-white px-5 py-2 rounded-full font-semibold shadow"> SCHEDULE A CALL </a>
+            class="hidden bg-white rounded-2xl transform-fill flex-col items-start space-y-4 p-10 transition-all uppercase duration-300 ease-in-out">
+            <a href="/" class="nav-link text-gray-700 hover:text-green-600">HOME</a>
+            <a href="what-sets-us-apart.html" class="nav-link text-gray-700 hover:text-green-600">What Sets Us Apart</a>
+            <a href="about.html" class="nav-link text-gray-700 hover:text-green-600">ABOUT US</a>
+            <a href="services.html" class="nav-link text-gray-700 hover:text-green-600">SERVICES</a>
+            <a href="gallery.html" class="nav-link text-gray-700 hover:text-green-600">GALLERY</a>
+            <a href="contact.html"
+                class="bg-yellow-500 hover:bg-yellow-600 text-white px-5 py-2 rounded-full font-semibold shadow">
+                SCHEDULE A CALL </a>
         </div>
     </nav>
 
     <script>
-        // Toggle mobile menu
         const menuBtn = document.getElementById("menu-btn");
         const mobileMenu = document.getElementById("mobile-menu");
+        const hamburger = document.getElementById("hamburger");
+        const closeIcon = document.getElementById("close-icon");
+
         menuBtn.addEventListener("click", () => {
+            // Toggle mobile menu visibility
             mobileMenu.classList.toggle("hidden");
             mobileMenu.classList.toggle("flex");
+
+            // Swap icons
+            hamburger.classList.toggle("hidden");
+            closeIcon.classList.toggle("hidden");
         });
- 
+        // Highlight active link
+        const navLinks = document.querySelectorAll(".nav-link");
+        const currentPath = window.location.pathname;
+
+       navLinks.forEach(link => {
+            const linkPath = new URL(link.href).pathname;
+            if (linkPath === currentPath || (currentPath === "/" && linkPath === "/index.html")) {
+                link.classList.remove("text-gray-700");
+                link.classList.add("text-green-600", "font-semibold");
+            }
+        });
+
+
     </script>
 
 </body>

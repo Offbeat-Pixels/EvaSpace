@@ -3,13 +3,33 @@
 html {
   scroll-behavior: smooth;
 }
-/* Target ID instead of class */
+
 #scrollbar-hide {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;     /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 #f7fafc;
+  overflow: overlay;        /* keeps scrollbar inside content */
+  border-radius: 1rem;      /* match Tailwind rounded-2xl */
+  background-clip: padding-box; /* ensures scrollbar respects rounded edges */
 }
+
+/* Chrome, Safari, Edge */
 #scrollbar-hide::-webkit-scrollbar {
-    display: none;  /* Chrome, Safari, Opera */
+  width: 8px;
+}
+
+#scrollbar-hide::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 1rem;   /* follow card corners */
+}
+
+#scrollbar-hide::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 1rem;
+  border: 2px solid #f1f5f9; /* creates spacing so it doesn't touch edges */
+}
+
+#scrollbar-hide::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
 }
 
 

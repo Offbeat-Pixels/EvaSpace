@@ -17,15 +17,14 @@
     <div id="navbar"></div>
     <section class="relative max-sm:bg-[url(images/Banner-mobile.webp)] bg-[url(images/BannerImg.webp)] bg-cover pt-32">
         <main class="relative max-w-7xl mx-auto px-2 py-5 sm:px-6 lg:px-8 space-y-5 ">
-            <div
-                class="max-sm:bg-[url(images/contactBg.webp)] bg-[url(images/contactBg.svg)] bg-contain bg-no-repeat max-w-5xl mx-auto p-2 md:p-8 ">
+            <div class=" lg:bg-[url(images/contactBg.svg)] bg-contain bg-no-repeat max-w-[60rem] mx-auto p-2 md:p-8 ">
                 <!-- Inquiry Form -->
                 <div class="mx-auto w-fit  bg-white border border-gray-300 rounded-2xl px-4 py-1 -translate-y-7">
-                    <h2 class="text-2xl text-center font-bold ">
-                        The property you wish to inquire about
+                    <h2 class="text-xl text-center font-bold ">
+                        The property you wish to enquire about
                     </h2>
                 </div>
-                <form  class="bg-transparent rounded-2xl space-y-8">
+                <form class="bg-transparent rounded-2xl space-y-8 ">
                     <!-- Basic Information -->
                     <fieldset>
                         <legend class="text-lg font-semibold text-gray-800 mb-4">Basic Information</legend>
@@ -59,13 +58,12 @@
                     </fieldset>
 
                     <!-- Content of Inquiry -->
-                    <fieldset>
-                        <legend class="text-lg font-semibold text-gray-800 mb-4">Content of Your Inquiry</legend>
+                    <fieldset>  <legend class="text-lg font-semibold text-gray-800 mb-4">Content of Your Inquiry</legend>
                         <div class="flex flex-wrap md:flex-row items-start md:items-center justify-start gap-6">
                             <div>
                                 <label class="block text-sm font-medium text-gray-900 mb-2">Your Request</label>
                                 <div
-                                    class="flex-col md:flex-row  items-start md:items-center justify-center  gap-4 border border-gray-300  rounded-xl px-4 py-2">
+                                    class="flex flex-col md:flex-row  items-start md:items-center justify-center  gap-4 border border-gray-300  rounded-xl px-4 py-2">
                                     <label class="flex items-center gap-2">
                                         <input type="radio" name="request" value="tour"
                                             class="text-yellow-600 focus:ring-yellow-500">
@@ -82,8 +80,7 @@
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">How You Want To
                                     Lease</label>
-                                <div
-                                    class="flex flex-col md:flex-row  items-start md:items-center justify-center gap-4 border border-gray-300  rounded-xl px-4 py-2">
+                                <div class="flex flex-col md:flex-row  items-start md:items-center justify-center gap-4 border border-gray-300  rounded-xl px-4 py-2">
                                     <label class="flex items-center gap-2">
                                         <input type="radio" name="lease" value="furnished"
                                             class="text-yellow-600 focus:ring-yellow-500">
@@ -106,81 +103,84 @@
                                 <label for="area" class="block text-sm font-medium text-gray-700 ">Desired Area</label>
                                 <select id="area" name="area"
                                     class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2 focus:ring-yellow-500 focus:border-yellow-500">
-                                    <option value="">Please Select</option>
-                                    <option>Dehradun</option>
-                                    <option>Delhi</option>
-                                    <option>Other</option>
+                                    <option value="">Please Select</option> 
+                                    <option>Very Small Team (1–5 People)</option>
+                                    <option>Small Group (6–15 People)</option>
+                                    <option>Medium (16–30 People)</option>
+                                    <option>Large Team (31–50 People)</option>
+                                    <option>Very Large Team (50+ People)</option>
                                 </select>
                             </div>
                         </div>
                     </fieldset>
 
                     <!-- Newsletter -->
-                    <fieldset>
+                    <!-- <fieldset>
                         <legend class="text-lg font-semibold text-gray-800 mb-2">Newsletter Subscription</legend>
                         <div class="space-y-3 text-sm md:text-base">
                             <label class="flex items-center gap-2">
-                                <input type="checkbox" name="newsletter_email" value="on" class="text-yellow-600 focus:ring-yellow-500">
+                                <input type="checkbox" name="newsletter_email" value="on"
+                                    class="text-yellow-600 focus:ring-yellow-500">
                                 I would like to receive the email newsletter.
                             </label>
                             <label class="flex items-center gap-2">
-                                <input type="checkbox" name="newsletter_personal" value="on" class="text-yellow-600 focus:ring-yellow-500"
-                                    required>
+                                <input type="checkbox" name="newsletter_personal" value="on"
+                                    class="text-yellow-600 focus:ring-yellow-500" required>
                                 I agree to the handling of personal information.
                             </label>
                         </div>
-                    </fieldset>
+                    </fieldset> -->
                     <!-- Submit -->
-                    <div class="flex justify-center -translate-y-4">
+                    <div class="flex justify-center ">
                         <button type="submit"
-                            class="px-14 py-2 bg-yellow-500 text-white font-semibold rounded-full shadow hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-400">
+                            class="px-12 py-2 bg-yellow-500 text-white font-semibold rounded-full shadow hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-400">
                             Make an Inquiry
                         </button>
                     </div>
                 </form>
 
-                <!-- Contact Section -->
-                <section class="mt-12 grid md:grid-cols-2 gap-8 items-start">
-                    <div itemscope itemtype="https://schema.org/LocalBusiness" class="font-semibold text-black">
-                        <h3 class="text-xl font-semibold mb-4">Prefer a Direct Approach?</h3>
-                        <p class="flex items-center gap-2 mb-2">
-                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
-                               >
-                                <g clip-path="url(#clip0_98_5288)">
-                                    <path
-                                        d="M4.6475 0C4.95359 0.0691732 5.23862 0.180957 5.45932 0.414486C5.70941 0.678451 5.83639 0.99388 5.84637 1.35801C5.86578 2.10563 5.93066 2.84827 6.10866 3.57708C6.18297 3.88255 6.27724 4.18359 6.35321 4.48906C6.46633 4.9445 6.35432 5.3457 6.06708 5.71536C5.58852 6.33073 5.12272 6.95606 4.65637 7.58083C4.62975 7.6168 4.62698 7.69759 4.64861 7.73854C5.4937 9.32731 6.60496 10.682 8.13101 11.6665C8.49311 11.9 8.86797 12.1131 9.2334 12.341C9.3188 12.3942 9.37536 12.3826 9.45244 12.3233C10.084 11.8386 10.7173 11.3555 11.3544 10.8785C11.6927 10.625 12.0798 10.5575 12.4879 10.6499C12.9775 10.7611 13.4589 10.9155 13.9524 11.0019C14.4298 11.0849 14.9189 11.1441 15.4025 11.1435C16.1816 11.1424 16.8126 11.4805 17 12.3521V15.8052C16.9052 16.0238 16.8365 16.259 16.7095 16.4571C16.5037 16.7792 16.1655 16.9181 15.8045 17.0006H14.9744C14.8984 16.9906 14.8224 16.9762 14.7459 16.9718C13.9163 16.9258 13.0956 16.8135 12.2838 16.6353C10.3336 16.207 8.53082 15.4328 6.88111 14.3111C4.84324 12.9254 3.21295 11.1585 2.00353 9.01022C0.673788 6.64727 0.0183422 4.10501 4.29622e-05 1.3973C-0.00272965 1.01657 0.128692 0.683431 0.395972 0.407292C0.615563 0.17985 0.895597 0.0724935 1.19393 0H4.6475Z"
-                                        fill="#FAAD00" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_98_5288">
-                                        <rect width="17" height="17" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            <a href="tel:+919412075850" itemprop="telephone" class="hover:underline">+91-9412075850</a>
-                        </p>
-                        <p class="flex items-center gap-2 mb-2">
-                            <svg width="19" height="14" viewBox="0 0 19 14" fill="none"
-                               >
-                                <g clip-path="url(#clip0_98_5290)">
-                                    <path
-                                        d="M0 3.95738C1.20843 4.69264 2.41796 5.42626 3.62585 6.16316C5.35641 7.21845 7.08806 8.27101 8.81369 9.33396C9.27451 9.61789 9.70524 9.61515 10.1672 9.33287C13.0345 7.57897 15.9067 5.83328 18.7778 4.0854C18.8402 4.0471 18.9042 4.011 19.0005 3.9541V4.16855C19.0005 6.47499 19.0011 8.78142 19.0005 11.0879C19 12.7898 17.7861 13.9983 16.0709 13.9994C12.0198 14.001 7.96866 14.0021 3.91756 13.9977C3.38066 13.9972 2.83555 14.018 2.3085 13.9381C1.1247 13.7586 0.220014 12.8056 0.036669 11.6273C0.031196 11.5928 0.0131352 11.5605 0.0010946 11.5272C0 9.00353 0 6.48046 0 3.95738Z"
-                                        fill="#FAAD00" />
-                                    <path
-                                        d="M9.50204 0.000590833C11.6972 0.000590833 13.8925 0.000590833 16.0877 0.000590833C17.1221 0.000590833 17.9463 0.411438 18.5182 1.27854C18.6654 1.50174 18.747 1.76817 18.8608 2.01325C18.9265 2.15439 18.874 2.22715 18.7454 2.30539C16.381 3.74417 14.02 5.18788 11.6584 6.6305C10.989 7.03971 10.3175 7.44563 9.65145 7.86031C9.54582 7.92595 9.47467 7.92158 9.37068 7.85812C6.3288 6.00028 3.28473 4.14517 0.238468 2.2939C0.122441 2.22333 0.0956235 2.15987 0.13284 2.02802C0.478185 0.805327 1.57169 0.0027791 2.9164 0.0011379C5.11161 -0.00105037 7.30682 0.000590833 9.50204 0.000590833Z"
-                                        fill="#FAAD00" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_98_5290">
-                                        <rect width="19" height="14" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            <a href="mailto:info@evaspaces.com" itemprop="email"
-                                class="hover:underline">info@evaspaces.com</a>
-                        </p>
-                        <p class="flex items-center gap-2 mb-2">
-                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            </div>
+            <!-- Contact Section -->
+            <section class="mt-10 grid md:grid-cols-2 gap-8 items-start max-w-4xl mx-auto">
+                <div itemscope itemtype="https://schema.org/LocalBusiness" class="font-semibold text-black">
+                    <h3 class="text-xl font-semibold mb-4">Prefer a Direct Approach?</h3>
+                    <p class="flex items-center gap-2 mb-2">
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+                            <g clip-path="url(#clip0_98_5288)">
+                                <path
+                                    d="M4.6475 0C4.95359 0.0691732 5.23862 0.180957 5.45932 0.414486C5.70941 0.678451 5.83639 0.99388 5.84637 1.35801C5.86578 2.10563 5.93066 2.84827 6.10866 3.57708C6.18297 3.88255 6.27724 4.18359 6.35321 4.48906C6.46633 4.9445 6.35432 5.3457 6.06708 5.71536C5.58852 6.33073 5.12272 6.95606 4.65637 7.58083C4.62975 7.6168 4.62698 7.69759 4.64861 7.73854C5.4937 9.32731 6.60496 10.682 8.13101 11.6665C8.49311 11.9 8.86797 12.1131 9.2334 12.341C9.3188 12.3942 9.37536 12.3826 9.45244 12.3233C10.084 11.8386 10.7173 11.3555 11.3544 10.8785C11.6927 10.625 12.0798 10.5575 12.4879 10.6499C12.9775 10.7611 13.4589 10.9155 13.9524 11.0019C14.4298 11.0849 14.9189 11.1441 15.4025 11.1435C16.1816 11.1424 16.8126 11.4805 17 12.3521V15.8052C16.9052 16.0238 16.8365 16.259 16.7095 16.4571C16.5037 16.7792 16.1655 16.9181 15.8045 17.0006H14.9744C14.8984 16.9906 14.8224 16.9762 14.7459 16.9718C13.9163 16.9258 13.0956 16.8135 12.2838 16.6353C10.3336 16.207 8.53082 15.4328 6.88111 14.3111C4.84324 12.9254 3.21295 11.1585 2.00353 9.01022C0.673788 6.64727 0.0183422 4.10501 4.29622e-05 1.3973C-0.00272965 1.01657 0.128692 0.683431 0.395972 0.407292C0.615563 0.17985 0.895597 0.0724935 1.19393 0H4.6475Z"
+                                    fill="#FAAD00" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_98_5288">
+                                    <rect width="17" height="17" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <a href="tel:+919412075850" itemprop="telephone" class="hover:underline">+91-9412075850</a>
+                    </p>
+                    <p class="flex items-center gap-2 mb-2">
+                        <svg width="19" height="14" viewBox="0 0 19 14" fill="none">
+                            <g clip-path="url(#clip0_98_5290)">
+                                <path
+                                    d="M0 3.95738C1.20843 4.69264 2.41796 5.42626 3.62585 6.16316C5.35641 7.21845 7.08806 8.27101 8.81369 9.33396C9.27451 9.61789 9.70524 9.61515 10.1672 9.33287C13.0345 7.57897 15.9067 5.83328 18.7778 4.0854C18.8402 4.0471 18.9042 4.011 19.0005 3.9541V4.16855C19.0005 6.47499 19.0011 8.78142 19.0005 11.0879C19 12.7898 17.7861 13.9983 16.0709 13.9994C12.0198 14.001 7.96866 14.0021 3.91756 13.9977C3.38066 13.9972 2.83555 14.018 2.3085 13.9381C1.1247 13.7586 0.220014 12.8056 0.036669 11.6273C0.031196 11.5928 0.0131352 11.5605 0.0010946 11.5272C0 9.00353 0 6.48046 0 3.95738Z"
+                                    fill="#FAAD00" />
+                                <path
+                                    d="M9.50204 0.000590833C11.6972 0.000590833 13.8925 0.000590833 16.0877 0.000590833C17.1221 0.000590833 17.9463 0.411438 18.5182 1.27854C18.6654 1.50174 18.747 1.76817 18.8608 2.01325C18.9265 2.15439 18.874 2.22715 18.7454 2.30539C16.381 3.74417 14.02 5.18788 11.6584 6.6305C10.989 7.03971 10.3175 7.44563 9.65145 7.86031C9.54582 7.92595 9.47467 7.92158 9.37068 7.85812C6.3288 6.00028 3.28473 4.14517 0.238468 2.2939C0.122441 2.22333 0.0956235 2.15987 0.13284 2.02802C0.478185 0.805327 1.57169 0.0027791 2.9164 0.0011379C5.11161 -0.00105037 7.30682 0.000590833 9.50204 0.000590833Z"
+                                    fill="#FAAD00" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_98_5290">
+                                    <rect width="19" height="14" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <a href="mailto:info@evaspaces.com" itemprop="email"
+                            class="hover:underline">info@evaspaces.com</a>
+                    </p>
+                    <p class="flex items-center gap-2 mb-2">
+                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_98_5293)">
                                 <path
                                     d="M0 12.1738C0 11.7246 0 11.2754 0 10.8262C0.0140381 10.747 0.0303223 10.6684 0.0409912 10.5886C0.095459 10.1737 0.128027 9.75479 0.205518 9.34431C0.640698 7.05386 1.68345 5.07449 3.32253 3.42024C5.0408 1.68513 7.10608 0.592969 9.51782 0.17688C9.95132 0.102197 10.3899 0.0578369 10.8262 0C11.2754 0 11.7246 0 12.1738 0C12.4771 0.036499 12.7814 0.0668213 13.0841 0.109497C15.3515 0.430127 17.3567 1.3353 19.0727 2.85085C21.0942 4.63594 22.3582 6.85732 22.8237 9.52063C22.8989 9.953 22.9422 10.3904 23.0006 10.8256V12.1733C22.9865 12.2524 22.9702 12.3311 22.9596 12.4108C22.9051 12.8258 22.8725 13.2447 22.795 13.6551C22.3599 15.9456 21.3171 17.925 19.678 19.5792C17.9598 21.3143 15.895 22.4065 13.4827 22.822C13.0492 22.8967 12.6107 22.941 12.1744 22.9989H10.8267C10.5235 22.9624 10.2192 22.9321 9.9165 22.8894C7.64907 22.5688 5.64387 21.6636 3.92786 20.148C1.90637 18.3629 0.642383 16.1416 0.17688 13.4782C0.101074 13.0464 0.0578369 12.609 0 12.1738ZM11.5101 2.25452C6.46201 2.2781 2.31179 6.30422 2.25676 11.4523C2.20286 16.5161 6.34185 20.7067 11.4573 20.7399C16.5195 20.7724 20.7152 16.6812 20.7404 11.5382C20.7657 6.47717 16.6739 2.28933 11.5101 2.25508V2.25452Z"
@@ -194,21 +194,20 @@
                                     <rect width="23" height="23" fill="white" />
                                 </clipPath>
                             </defs>
-                        </svg> 
-                            <span >Monday to Friday, 9AM–6PM (GMT)</span>
-                        </p>
-                       
-                    </div>
+                        </svg>
+                        <span>Monday to Friday, 9AM–6PM (GMT)</span>
+                    </p>
 
-                    <div>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6885.162688318476!2d78.08497!3d30.362846!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3908d7178edf62dd%3A0xd35879fde8b59699!2sEvaspaces!5e0!3m2!1sen!2sin!4v1758526691859!5m2!1sen!2sin"
-                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade" class="rounded-xl shadow"></iframe>
+                </div>
 
-                    </div>
-                </section>
-            </div>
+                <div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6885.162688318476!2d78.08497!3d30.362846!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3908d7178edf62dd%3A0xd35879fde8b59699!2sEvaspaces!5e0!3m2!1sen!2sin!4v1758526691859!5m2!1sen!2sin"
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" class="rounded-xl shadow"></iframe>
+
+                </div>
+            </section>
         </main>
     </section>
 
@@ -218,7 +217,7 @@
     <div id="footer"></div>
 
     <!-- JS Loader -->
-    <script defer type="module" src="main.js"></script> 
+    <script defer type="module" src="main.js"></script>
 </body>
 
 </html>
