@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+                        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- Homepage -->
+    <url>
+        <loc>https://evaspaces.com/</loc>
+        <lastmod>2025-09-27T14:33:31+00:00</lastmod>
+        <priority>1.00</priority>
+    </url>
+
+    <!-- Contact page -->
+    <url>
+        <loc>https://evaspaces.com/contact.html</loc>
+        <lastmod>2025-09-27T14:33:28+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <!-- About page -->
+    <url>
+        <loc>https://evaspaces.com/about.html</loc>
+        <lastmod>2025-09-27T14:33:28+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <!-- Services page -->
+    <url>
+        <loc>https://evaspaces.com/services.html</loc>
+        <lastmod>2025-09-27T14:33:31+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <!-- What sets us apart page -->
+    <url>
+        <loc>https://evaspaces.com/what-sets-us-apart.html</loc>
+        <lastmod>2025-09-27T14:33:31+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <!-- Gallery page -->
+    <url>
+        <loc>https://evaspaces.com/gallery.html</loc>
+        <lastmod>2025-09-27T14:33:31+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <!-- Privacy Plociy page -->
+    <url>
+        <loc>https://evaspaces.com/privacy-policy.html</loc>
+        <lastmod>2025-09-27T14:33:31+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+</urlset>

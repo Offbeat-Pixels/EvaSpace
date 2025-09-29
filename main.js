@@ -325,7 +325,7 @@ const testimonialsData = [
     name: "Macula Consultants ",
     rating: 5,
     feedback:
-      "Eva Spaces provides a seamless work environment with everything I need to focus and grow my projects.",
+      "Evaspaces  provides a seamless work environment with everything I need to focus and grow my projects.",
     avatar: "images/Clients/Macula.webp",
   },
 
@@ -335,15 +335,14 @@ const testimonialsData = [
     rating: 4,
     feedback:
       "A great space for meetings, brainstorming, and networking with other professionals.",
-    avatar:
-      "images/Clients/OP.webp",
+    avatar: "images/Clients/OP.webp",
   },
   {
     id: 5,
     name: "Ayush Chouhan ",
     rating: 4,
     feedback:
-      "From the café to the workstations, every aspect of Eva Spaces makes working here enjoyable.",
+      "From the café to the workstations, every aspect of Evaspaces  makes working here enjoyable.",
     avatar:
       "https://imgs.search.brave.com/5k3wN1_sfVQBGKCcNtEKgYA18OAG0A6UFyS2TYqbnmA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNTkx/NDA3MTExL3Bob3Rv/L2luZGlhbi1idXNp/bmVzc21hbi1zdGFu/ZGluZy1vbi1vZmZp/Y2Utc3RlcHMuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPTR1/V0hiZGExZVZtVUFi/M2ZNTmxyX3BuMjVo/Q1ZHc1FjT2pXZVo3/RENFbFU9",
   },
@@ -361,7 +360,7 @@ const testimonialsData = [
     name: "Aditya Raj",
     rating: 4,
     feedback:
-      "Every corner of Eva Spaces is thoughtfully designed, making it an inspiring place to work.",
+      "Every corner of Evaspaces  is thoughtfully designed, making it an inspiring place to work.",
     avatar:
       "https://media.istockphoto.com/id/1216426542/photo/portrait-of-happy-man-at-white-background-stock-photo.jpg?b=1&s=612x612&w=0&k=20&c=dE3NlvctnoSlmxBHwh5zFXeKZJXe1wnCSw9apjgtY_o=",
   },
@@ -607,7 +606,7 @@ const sliderConfigs = {
   <div class="glimpse-card aspect-[3/4] rounded-2xl overflow-hidden">
     <img src="${glimpse.image}" 
          alt="${glimpse.alt}" 
-         class="w-full h-full object-cover" loading="lazy"  onerror="this.src='https://img.freepik.com/free-vector/404-error-with-man-cones_24908-77788.jpg?t=st=1758540375~exp=1758543975~hmac=7ace41be601e9463efc9ea66207b7b8d903a0bcd0b3ea583fe508bb5e8ce3e82&w=1480'"  />
+         class="w-full h-full object-cover" loading="eager"  onerror="this.src='https://img.freepik.com/free-vector/404-error-with-man-cones_24908-77788.jpg?t=st=1758540375~exp=1758543975~hmac=7ace41be601e9463efc9ea66207b7b8d903a0bcd0b3ea583fe508bb5e8ce3e82&w=1480'"  />
   </div>
 </div>`,
     options: {
