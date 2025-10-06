@@ -521,7 +521,7 @@ const sliderConfigs = {
            <p class="text-gray-600 "> ${usps.subtext} </p>
             </div>
        <div class="relative h-full">
-            <img src="${usps.image}" alt="${usps.title}" class="w-full h-72 object-cover rounded-t-2xl group-hover:scale-105 transition duration-500" loading="lazy" onerror="this.src='https://img.freepik.com/free-vector/404-error-with-man-cones_24908-77788.jpg?t=st=1758540375~exp=1758543975~hmac=7ace41be601e9463efc9ea66207b7b8d903a0bcd0b3ea583fe508bb5e8ce3e82&w=1480'">
+            <img loading="lazy" src="${usps.image}" alt="${usps.title}" class="w-full h-72 object-cover rounded-t-2xl group-hover:scale-105 transition duration-500"  onerror="this.src='https://img.freepik.com/free-vector/404-error-with-man-cones_24908-77788.jpg?t=st=1758540375~exp=1758543975~hmac=7ace41be601e9463efc9ea66207b7b8d903a0bcd0b3ea583fe508bb5e8ce3e82&w=1480'">
           </div> 
             <a href="${usps.link}" class=" absolute bottom-4 right-4 bg-yellow-500 cursor-pointer text-white w-10 h-10 flex items-center justify-center rounded-full shadow-md group-hover:scale-110 transition"> ➝ </a>
         </div>
@@ -558,7 +558,7 @@ const sliderConfigs = {
       <div class="swiper-slide">
         <div class="relative rounded-2xl overflow-hidden h-full group ">
           <div class="relative">
-            <img src="${service.image}" alt="${service.title}" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.freepik.com/free-vector/404-error-with-man-cones_24908-77788.jpg?t=st=1758540375~exp=1758543975~hmac=7ace41be601e9463efc9ea66207b7b8d903a0bcd0b3ea583fe508bb5e8ce3e82&w=1480'">
+            <img loading="lazy" src="${service.image}" alt="${service.title}" class="w-full h-full object-cover"  onerror="this.src='https://img.freepik.com/free-vector/404-error-with-man-cones_24908-77788.jpg?t=st=1758540375~exp=1758543975~hmac=7ace41be601e9463efc9ea66207b7b8d903a0bcd0b3ea583fe508bb5e8ce3e82&w=1480'">
           </div>
           <a href="${service.link}" class="arrow-icon cursor-pointer absolute top-0 right-0 bg-yellow-500 text-white w-10 h-10 flex items-center justify-center rounded-full shadow-md transition-transform duration-200 group-hover:text-black">
             →
@@ -604,9 +604,9 @@ const sliderConfigs = {
     slideTemplate: (glimpse) => `
     <div class="swiper-slide w-[24rem]">
   <div class="glimpse-card aspect-[3/4] rounded-2xl overflow-hidden">
-    <img src="${glimpse.image}" 
+    <img loading="eager" src="${glimpse.image}" 
          alt="${glimpse.alt}" 
-         class="w-full h-full object-cover" loading="eager"  onerror="this.src='https://img.freepik.com/free-vector/404-error-with-man-cones_24908-77788.jpg?t=st=1758540375~exp=1758543975~hmac=7ace41be601e9463efc9ea66207b7b8d903a0bcd0b3ea583fe508bb5e8ce3e82&w=1480'"  />
+         class="w-full h-full object-cover"  onerror="this.src='https://img.freepik.com/free-vector/404-error-with-man-cones_24908-77788.jpg?t=st=1758540375~exp=1758543975~hmac=7ace41be601e9463efc9ea66207b7b8d903a0bcd0b3ea583fe508bb5e8ce3e82&w=1480'"  />
   </div>
 </div>`,
     options: {
@@ -639,9 +639,9 @@ const sliderConfigs = {
     <div class="swiper-slide w-full h-full ">
       <div class="bg-green-50 rounded-xl p-6   transition h-full flex flex-col">
         <div class="flex items-center mb-4">
-          <img src="${t.avatar}" alt="${
+          <img loading="lazy" src="${t.avatar}" alt="${
       t.name
-    }" class="w-12 h-12 object-cover border border-white shadow-md rounded-full mr-3" loading="lazy" />
+    }" class="w-12 h-12 object-cover border border-white shadow-md rounded-full mr-3"   />
           <div>
             <h3 class="text-lg font-semibold text-gray-800">${t.name}</h3> 
           </div>
@@ -681,7 +681,7 @@ const sliderConfigs = {
     slideTemplate: (c) => `
     <div class="swiper-slide flex justify-center ">
       <div class="w-40 h-28 hover:scale-95 duration-300 flex items-center justify-center bg-white border border-gray-300 rounded-xl  transition">
-        <img src="${c.logo}" alt="${c.alt}" class="max-h-16 object-contain " loading="lazy" />
+        <img loading="lazy" src="${c.logo}" alt="${c.alt}" class="max-h-16 object-contain "   />
       </div>
     </div>
   `,
@@ -711,10 +711,10 @@ const sliderConfigs = {
     slideTemplate: (c) => `
     <div class="swiper-slide">
       <div class="rounded-xl overflow-hidden ">
-        <img src="${c.image}" 
+        <img loading="lazy" src="${c.image}" 
              alt="${c.alt}" 
              class="w-full h-96 object-contain aspect-square" 
-             loading="lazy"
+            
              onerror="this.src='https://img.freepik.com/free-vector/404-error-with-man-cones_24908-77788.jpg?t=st=1758540375~exp=1758543975~hmac=7ace41be601e9463efc9ea66207b7b8d903a0bcd0b3ea583fe508bb5e8ce3e82&w=1480'"/>
       </div>
     </div>
@@ -742,10 +742,10 @@ const sliderConfigs = {
     slideTemplate: (c) => `
     <div class="swiper-slide">
       <div class="rounded-xl overflow-hidden ">
-        <img src="${c.image}" 
+        <img loading="lazy" src="${c.image}" 
              alt="${c.alt}" 
              class="w-full h-96 object-contain aspect-square" 
-             loading="lazy"
+             
              onerror="this.src='https://img.freepik.com/free-vector/404-error-with-man-cones_24908-77788.jpg?t=st=1758540375~exp=1758543975~hmac=7ace41be601e9463efc9ea66207b7b8d903a0bcd0b3ea583fe508bb5e8ce3e82&w=1480'"/>
       </div>
     </div>
@@ -773,10 +773,10 @@ const sliderConfigs = {
     slideTemplate: (c) => `
     <div class="swiper-slide">
       <div class="rounded-xl overflow-hidden ">
-        <img src="${c.image}" 
+        <img loading="lazy" src="${c.image}" 
              alt="${c.alt}" 
              class="w-full h-96 object-contain aspect-square" 
-             loading="lazy"
+        
              onerror="this.src='https://img.freepik.com/free-vector/404-error-with-man-cones_24908-77788.jpg?t=st=1758540375~exp=1758543975~hmac=7ace41be601e9463efc9ea66207b7b8d903a0bcd0b3ea583fe508bb5e8ce3e82&w=1480'"/>
       </div>
     </div>

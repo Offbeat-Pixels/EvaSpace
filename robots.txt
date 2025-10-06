@@ -1,0 +1,7 @@
+# robots.txt for https://www.evaspaces.com/
+# Allow all crawlers to index the entire site
+User-agent: *
+Allow: /
+
+# Sitemap for better crawling and indexing
+Sitemap: https://www.evaspaces.com/sitemap.xml

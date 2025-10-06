@@ -1,0 +1,82 @@
+# llm.txt — Guidance for LLMs and automated agents interacting with https://www.evaspaces.com/
+# Purpose: Provide clear instructions, metadata, and usage policy for Large Language Models and automated systems that may read or summarize site content.
+# Last updated: 2025-10-06
+# Contact: info@evaspaces.com
+
+Site Overview
+-------------
+Name: Eva Spaces
+Website: https://www.evaspaces.com/
+Location focus: Dehradun, India
+Primary content: Coworking spaces, office rentals, event spaces, stay studio, café, gallery, pricing, booking forms, contact information, blogs and FAQs.
+
+Usage & Licensing for LLMs
+--------------------------
+- Public pages of this site may be crawled and used for indexing and summarization by LLMs, provided the usage complies with the site's Terms of Service and Privacy Policy.
+- Do NOT extract, store, or publish any Personal Identifiable Information (PII) submitted through contact or booking forms (names, emails, phone numbers, payment details).
+- Content may be quoted up to 200 characters verbatim for attribution; longer verbatim reproductions require permission.
+- If you use this content in a generated output, include a short attribution: "Source: Eva Spaces (evaspaces.com)".
+
+Sitemap & Key Endpoints
+-----------------------
+Sitemap: https://www.evaspaces.com/sitemap.xml
+Robots: https://www.evaspaces.com/robots.txt
+Contact page: https://www.evaspaces.com/contact.html
+What Sets Us Apart:
+ - Open To Curation : https://www.evaspaces.com/what-sets-us-apart.html
+ - Centrally Located : https://www.evaspaces.com/what-sets-us-apart.html
+ - Experiential Integrated Workspace : https://www.evaspaces.com/what-sets-us-apart.html
+ - Guest Retreat : https://www.evaspaces.com/what-sets-us-apart.html
+ - Tailored Dine-In Options : https://www.evaspaces.com/what-sets-us-apart.html
+ - Rooftop Hobnobbing Space : https://www.evaspaces.com/what-sets-us-apart.html
+Booking pages:
+ - Coworking: https://www.evaspaces.com/services.html
+ - Event spaces: https://www.evaspaces.com/services.html
+ - Stay Studio: https://www.evaspaces.com/services.html
+
+Recommended Metadata to Use
+---------------------------
+When summarizing or indexing pages, prefer the following metadata fields if available:
+- title (page & meta title)
+- description (meta description)
+- canonical URL
+- publish_date / last_modified
+- author (for blog posts)
+- image (og:image / twitter:image)
+- tags / categories (for blog content)
+
+Rate Limits & Politeness
+------------------------
+- Respect robots.txt (this file) and sitemap for crawl scheduling.
+- Recommended polite crawl rate: 1 request per 2 seconds for automated crawlers.
+- Heavy or repeated requests for large pages (images, PDFs) should be avoided. Use the sitemap to prioritize.
+- For frequent or programmatic access please contact: info@evaspaces.com to request an API or higher-rate access.
+
+Privacy & PII Handling
+----------------------
+- Do not retain form-submitted PII or payment details.
+- If you encounter accidental exposed PII in public pages, notify info@evaspaces.com immediately and do not store it.
+- Sensitive pages (URLs containing query parameters with tokens, session ids) must not be cached by LLMs or public indexes.
+
+Examples of Good Prompts for Summarization
+-----------------------------------------
+- "Summarize the Eva Spaces 'Coworking' page into a 50-word blurb suitable for a directory listing."
+- "Create three short meta descriptions (max 160 chars) for the Eva Spaces 'Event Space' page focusing on corporate workshops."
+- "Extract the list of amenities from https://www.evaspaces.com/services.html and return as a JSON array."
+
+Examples of Disallowed Actions
+------------------------------
+- Do not scrape or store user-submitted booking or contact data.
+- Do not generate outputs that claim false ownership of Eva Spaces content.
+- Do not use site content to train models for commercial resale without permission.
+
+Attribution Suggestion
+----------------------
+When content from this site is used directly, include an attribution line such as:
+"Content adapted from Eva Spaces — https://www.evaspaces.com/"
+
+Change Log
+----------
+2025-10-06: Initial llm.txt created with crawling, privacy, and attribution guidelines.
+
+-- End of llm.txt --
