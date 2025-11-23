@@ -318,7 +318,6 @@ const glimpsesData = [
     category: "rooftop",
   },
 ];
-
 const testimonialsData = [
   {
     id: 1,
